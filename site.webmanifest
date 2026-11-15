@@ -1,0 +1,10 @@
+{
+  "name": "Paul Messanga — Lead développeur full-stack",
+  "short_name": "Paul Messanga",
+  "lang": "fr",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F4F1EA",
+  "theme_color": "#16150F",
+  "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

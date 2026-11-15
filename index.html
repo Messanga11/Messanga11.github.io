@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paul Messanga — Lead développeur full-stack à Yaoundé (Node.js, PostgreSQL, Docker)</title>
+  <meta name="description" content="Lead développeur full-stack basé à Yaoundé. Je reprends des bases de code existantes, je sécurise les parcours critiques et je pilote les mises en production : Node.js, PostgreSQL, Docker, React Native.">
+  <meta name="author" content="Paul Messanga">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://messanga11.github.io/">
+  <meta name="theme-color" content="#F4F1EA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121210" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Paul Messanga">
+  <meta property="og:title" content="Paul Messanga — Lead développeur full-stack">
+  <meta property="og:description" content="Reprendre un code existant, sécuriser les parcours critiques, piloter les mises en production. Node.js, PostgreSQL, Docker, React Native.">
+  <meta property="og:url" content="https://messanga11.github.io/">
+  <meta property="og:image" content="https://messanga11.github.io/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Paul Messanga, lead développeur full-stack à Yaoundé">
+  <meta property="profile:first_name" content="Paul">
+  <meta property="profile:last_name" content="Messanga">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Paul Messanga — Lead développeur full-stack">
+  <meta name="twitter:description" content="Reprendre un code existant, sécuriser les parcours critiques, piloter les mises en production.">
+  <meta name="twitter:image" content="https://messanga11.github.io/assets/img/og.png">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add("js")</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://messanga11.github.io/#paul",
+        "name": "Paul Messanga",
+        "jobTitle": "Lead développeur full-stack",
+        "url": "https://messanga11.github.io/",
+        "email": "mailto:ndazoomessanga@gmail.com",
+        "telephone": "+237698105092",
+        "address": { "@type": "PostalAddress", "addressLocality": "Yaoundé", "addressCountry": "CM" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "EGEM" },
+        "knowsLanguage": ["fr", "en"],
+        "knowsAbout": ["Node.js", "TypeScript", "PostgreSQL", "Docker", "GitHub Actions", "React", "Next.js", "React Native", "Flutter", "Tests de bout en bout", "Mise en production"],
+        "sameAs": ["https://github.com/Messanga11", "https://www.linkedin.com/in/paul-messanga-954a711b3"]
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://messanga11.github.io/#page",
+        "url": "https://messanga11.github.io/",
+        "name": "Paul Messanga — Lead développeur full-stack",
+        "inLanguage": "fr",
+        "mainEntity": { "@id": "https://messanga11.github.io/#paul" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header" data-header>
+    <div class="wrap header-inner">
+      <a class="brand" href="#haut" aria-label="Paul Messanga, retour en haut">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        Paul Messanga
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-menu-btn>
+          <span class="visually-hidden">Ouvrir le menu</span>
+          <span class="menu-lines" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-list" id="menu" data-menu>
+          <li><a href="#realisations">Réalisations</a></li>
+          <li><a href="#methode">Méthode</a></li>
+          <li><a href="#parcours">Parcours</a></li>
+          <li><a class="btn btn-small" href="#contact">Me contacter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- Hero -->
+    <section class="hero" id="haut" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="status"><span class="dot" aria-hidden="true"></span>Disponible rapidement · Yaoundé, Cameroun</p>
+          <h1 id="hero-title">Je livre des logiciels qui tiennent en production.</h1>
+          <p class="lead">Lead développeur full-stack depuis 2019. Je reprends des bases de code existantes, je sécurise les parcours critiques par des tests de bout en bout et je pilote les mises en production.</p>
+          <div class="actions">
+            <a class="btn" href="#realisations">Voir mes réalisations</a>
+            <a class="btn btn-ghost" href="assets/cv-paul-messanga.pdf" download>Télécharger mon CV <span class="meta">PDF</span></a>
+          </div>
+          <ul class="stack-line" aria-label="Technologies principales">
+            <li>Node.js</li><li>TypeScript</li><li>PostgreSQL</li><li>Docker</li><li>GitHub Actions</li><li>React Native</li>
+          </ul>
+        </div>
+
+        <figure class="deploy" aria-label="Exemple de journal de mise en production">
+          <div class="deploy-bar">
+            <span class="deploy-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="mono">mise-en-production.log</span>
+          </div>
+          <ol class="deploy-log mono" data-log>
+            <li><span class="ok">✓</span> Code existant audité</li>
+            <li><span class="ok">✓</span> Parcours critiques couverts par les tests</li>
+            <li><span class="ok">✓</span> Image Docker construite par GitHub Actions</li>
+            <li><span class="ok">✓</span> Nouvelle version vérifiée avant la bascule</li>
+            <li><span class="ok">✓</span> Version précédente prête pour un retour arrière</li>
+            <li class="final"><span class="ok">●</span> En production</li>
+          </ol>
+          <figcaption class="visually-hidden">Les étapes que je suis pour chaque mise en production.</figcaption>
+        </figure>
+      </div>
+
+      <div class="wrap">
+        <dl class="figures">
+          <div><dt>344</dt><dd>tests de bout en bout Playwright sur les parcours critiques d'Adsquid</dd></div>
+          <div><dt>10</dt><dd>mises en production pilotées avec un déploiement blue-green</dd></div>
+          <div><dt>5 000+</dt><dd>téléchargements de Cooltchop sur Google Play</dd></div>
+          <div><dt>3 stores</dt><dd>Google Play, App Store et Amazon Appstore</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Réalisations -->
+    <section class="section" id="realisations" aria-labelledby="work-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow mono">01 · Réalisations</p>
+          <h2 id="work-title">Cinq produits, cinq façons d'aller en production.</h2>
+          <p class="section-intro">Pour chacun : le problème de départ, ce que j'ai fait, et ce qui a changé. Rien d'inventé : chaque chiffre vient du code, des tests ou des stores.</p>
+        </header>
+
+        <div class="releases">
+          <article class="release" aria-labelledby="r-utando">
+            <header class="release-head">
+              <div>
+                <p class="release-meta mono">Mission freelance · 2026</p>
+                <h3 id="r-utando">Utando</h3>
+                <p class="release-tag">Plateforme logistique : partenaires, chauffeurs, voyageurs.</p>
+              </div>
+              <p class="pill pill-live"><span class="dot" aria-hidden="true"></span>En production</p>
+            </header>
+            <div class="release-body">
+              <div><h4>Le problème</h4><p>Partenaires, chauffeurs et superviseurs doivent suivre les mêmes courses, le même stock et les mêmes paiements, depuis leur téléphone.</p></div>
+              <div><h4>Ce que j'ai fait</h4><p>Conçu l'architecture : une API Node.js / Fastify sur PostgreSQL qui sert 3 applications Expo et un back-office React. Authentification Argon2 avec rotation des sessions, Sentry côté app et API.</p></div>
+              <div><h4>Ce qui a changé</h4><p>Une seule source de vérité pour toute l'équipe, avec un rapport quotidien par superviseur. Les 6 services sont livrés par GitHub Actions et Docker sur Dokploy.</p></div>
+            </div>
+            <footer class="release-foot">
+              <ul class="chips" aria-label="Technologies"><li>Node.js</li><li>Fastify</li><li>PostgreSQL</li><li>Expo</li><li>Docker</li><li>GitHub Actions</li><li>LiveKit</li></ul>
+              <ul class="links">
+                <li><a href="https://partner.randyetlynn.com" rel="noopener" target="_blank">partner.randyetlynn.com</a></li>
+                <li><a href="https://driver.randyetlynn.com" rel="noopener" target="_blank">driver.randyetlynn.com</a></li>
+                <li><a href="https://admin.randyetlynn.com" rel="noopener" target="_blank">admin.randyetlynn.com</a></li>
+              </ul>
+            </footer>
+          </article>
+
+          <article class="release" aria-labelledby="r-adsquid">
+            <header class="release-head">
+              <div>
+                <p class="release-meta mono">Mission freelance · 2026</p>
+                <h3 id="r-adsquid">Adsquid</h3>
+                <p class="release-tag">E-commerce et studio de création publicitaire.</p>
+              </div>
+              <p class="pill pill-live"><span class="dot" aria-hidden="true"></span>En production</p>
+            </header>
+            <div class="release-body">
+              <div><h4>Le problème</h4><p>Une plateforme existante à reprendre (API NestJS / GraphQL, dashboard React), avec une migration annoncée mais pas réellement faite.</p></div>
+              <div><h4>Ce que j'ai fait</h4><p>Audité 10 modules, 563 colonnes et 262 règles métier : seules 9 colonnes étaient réellement migrées. L'audit est devenu le plan de migration vers Payload CMS et Next.js sur PostgreSQL.</p></div>
+              <div><h4>Ce qui a changé</h4><p>344 tests Playwright sur l'inscription, le panier et le paiement Stripe / PayPal, et 10 mises en production avec un déploiement blue-green et un retour arrière immédiat.</p></div>
+            </div>
+            <footer class="release-foot">
+              <ul class="chips" aria-label="Technologies"><li>Next.js</li><li>Payload CMS</li><li>PostgreSQL</li><li>Playwright</li><li>Docker</li><li>Nginx</li></ul>
+              <ul class="links"><li><a href="https://adsquid.fr/" rel="noopener" target="_blank">adsquid.fr</a></li></ul>
+            </footer>
+          </article>
+
+          <article class="release" aria-labelledby="r-stackz">
+            <header class="release-head">
+              <div>
+                <p class="release-meta mono">One2All.TV · 2025 – 2026</p>
+                <h3 id="r-stackz">StackZ et One2All TV</h3>
+                <p class="release-tag">Direct vidéo, salons et jeux, sur TV et mobile.</p>
+              </div>
+              <p class="pill pill-live"><span class="dot" aria-hidden="true"></span>Sur les stores</p>
+            </header>
+            <div class="release-body">
+              <div><h4>Le problème</h4><p>Du direct vidéo, des salons à plusieurs hôtes et des publicités, le tout piloté à la télécommande, sans saccade.</p></div>
+              <div><h4>Ce que j'ai fait</h4><p>Seul développeur des applications TV et mobile en React Native : WebRTC, co-animation, publicités avec reprise automatique, Picture-in-Picture. Corrections pilotées par les tests.</p></div>
+              <div><h4>Ce qui a changé</h4><p>Un déplacement à la télécommande redessine 2 cartes au lieu d'environ 14, mesuré avant et après avec Flashlight. Publiées sur Google Play, l'App Store et l'Amazon Appstore.</p></div>
+            </div>
+            <footer class="release-foot">
+              <ul class="chips" aria-label="Technologies"><li>React Native</li><li>Android TV</li><li>WebRTC</li><li>React / Ionic</li><li>TDD</li></ul>
+              <ul class="links"><li><a href="https://stackz.gg/" rel="noopener" target="_blank">stackz.gg</a></li><li><a href="https://hub.one2all.tv/" rel="noopener" target="_blank">hub.one2all.tv</a></li></ul>
+            </footer>
+          </article>
+
+          <article class="release" aria-labelledby="r-crm">
+            <header class="release-head">
+              <div>
+                <p class="release-meta mono">WebPackSolution · 2026</p>
+                <h3 id="r-crm">CRM immobilier</h3>
+                <p class="release-tag">Le CRM qui alimente exclusivealgarvevillas.com.</p>
+              </div>
+              <p class="pill pill-live"><span class="dot" aria-hidden="true"></span>En production</p>
+            </header>
+            <div class="release-body">
+              <div><h4>Le problème</h4><p>Des prospects arrivent par le site, par e-mail et par WhatsApp. Aucun ne doit rester sans réponse.</p></div>
+              <div><h4>Ce que j'ai fait</h4><p>Conçu le pipeline de ventes et un agent IA WhatsApp qui qualifie les prospects à toute heure. Créé 290 fichiers de tests sur la connexion, la double authentification et les droits.</p></div>
+              <div><h4>Ce qui a changé</h4><p>Chaque prospect reçoit automatiquement un consultant et une échéance de premier contact de 4 h. Les doublons sont signalés, les relances partent seules.</p></div>
+            </div>
+            <footer class="release-foot">
+              <ul class="chips" aria-label="Technologies"><li>Laravel</li><li>Filament</li><li>Twilio</li><li>Pest</li><li>Typesense</li></ul>
+              <ul class="links"><li><a href="https://www.exclusivealgarvevillas.com/fr" rel="noopener" target="_blank">exclusivealgarvevillas.com</a></li></ul>
+            </footer>
+          </article>
+
+          <article class="release" aria-labelledby="r-cooltchop">
+            <header class="release-head">
+              <div>
+                <p class="release-meta mono">Kevmax · 2021 – 2026</p>
+                <h3 id="r-cooltchop">Cooltchop</h3>
+                <p class="release-tag">Commande et livraison de repas au Cameroun.</p>
+              </div>
+              <p class="pill pill-live"><span class="dot" aria-hidden="true"></span>Sur les stores</p>
+            </header>
+            <div class="release-body">
+              <div><h4>Le problème</h4><p>Commander un repas au Cameroun, sur des réseaux mobiles qui coupent souvent.</p></div>
+              <div><h4>Ce que j'ai fait</h4><p>Développé le produit de bout en bout : l'API en PHP / Slim, l'application React Native et la version web.</p></div>
+              <div><h4>Ce qui a changé</h4><p>Plus de 5 000 téléchargements sur Google Play, avec une app publiée aussi sur l'App Store et conçue pour les connexions instables.</p></div>
+            </div>
+            <footer class="release-foot">
+              <ul class="chips" aria-label="Technologies"><li>React Native</li><li>PHP / Slim</li><li>Web</li></ul>
+              <ul class="links"><li><a href="https://cooltchop.com/" rel="noopener" target="_blank">cooltchop.com</a></li></ul>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Autres projets -->
+    <section class="section section-alt" aria-labelledby="more-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow mono">02 · Autres projets</p>
+          <h2 id="more-title">D'autres produits, la même exigence.</h2>
+        </header>
+        <ul class="cards">
+          <li class="card">
+            <p class="card-meta mono">Kevmax · Flutter</p>
+            <h3>Docta</h3>
+            <p>Télémédecine au Cameroun : rendez-vous, téléconsultation, second avis, paiement MTN MoMo et Orange Money. J'ai mis en place la parité web / mobile.</p>
+            <a href="https://doctaapp.fr/" rel="noopener" target="_blank">doctaapp.fr</a>
+          </li>
+          <li class="card">
+            <p class="card-meta mono">Freelance · Payload, Docker</p>
+            <h3>Epiltech</h3>
+            <p>Boutique et formations : migration de Prisma vers Payload sur PostgreSQL, toute l'infrastructure auto-hébergée sous Docker Compose avec sauvegardes quotidiennes.</p>
+          </li>
+          <li class="card">
+            <p class="card-meta mono">Freelance · FastAPI, React</p>
+            <h3>Snow Volican</h3>
+            <p>Plateforme d'événements développée seul, avec un déploiement sans interruption : plusieurs instances derrière Nginx, vérifications de santé, mise à jour progressive.</p>
+          </li>
+          <li class="card">
+            <p class="card-meta mono">Next.js · FastAPI</p>
+            <h3>Carla+</h3>
+            <p>Diagnostic capillaire par IA transformé en parcours simple, de la question jusqu'au produit recommandé.</p>
+            <a href="https://carlaplus.com/fr/" rel="noopener" target="_blank">carlaplus.com</a>
+          </li>
+          <li class="card">
+            <p class="card-meta mono">Web et mobile</p>
+            <h3>ChezBio</h3>
+            <p>E-commerce de produits bio et de machines fabriquées localement.</p>
+            <a href="https://www.chezbio.com/" rel="noopener" target="_blank">chezbio.com</a>
+          </li>
+          <li class="card">
+            <p class="card-meta mono">Web</p>
+            <h3>OuiSpeak et WuizUp</h3>
+            <p>Interprétation à distance pour réunions multilingues, et une plateforme web grand public.</p>
+            <a href="https://ouispeak.io/fr/" rel="noopener" target="_blank">ouispeak.io</a>
+          </li>
+        </ul>
+
+        <div class="oss">
+          <h3 class="oss-title">Open source et produits personnels</h3>
+          <ul class="oss-list">
+            <li><a href="https://github.com/Messanga11/core" rel="noopener" target="_blank" class="mono">Messanga11/core</a><span>Socle TypeScript multi-clients sur PostgreSQL (migrations, isolation des données, file d'événements fiable), CI sur de vrais PostgreSQL et Redis.</span></li>
+            <li><a href="https://github.com/Messanga11/create-messanga11-app" rel="noopener" target="_blank" class="mono">create-messanga11-app</a><span>Génère un monorepo Next.js et Expo prêt à l'emploi.</span></li>
+            <li><a href="https://github.com/Messanga11/formbuilder" rel="noopener" target="_blank" class="mono">formbuilder</a><span>Formulaires React headless et extensibles (TanStack Form, Zod).</span></li>
+            <li><a href="https://github.com/Messanga11/table-page" rel="noopener" target="_blank" class="mono">table-page</a><span>Pages de tableau CRUD headless (TanStack Table, TanStack Query).</span></li>
+            <li><span class="mono">Filjuste</span><span>Studio vidéo par IA (modèles OpenRouter, plafond de dépense par projet) et site de vente de terrains.</span></li>
+            <li><span class="mono">Ralph</span><span>Mon système autonome de construction d'apps : il rédige les spécifications et leurs tests, puis construit chaque fonctionnalité. Karreer a été construit avec lui.</span></li>
+            <li><span class="mono">Yegle</span><span>En conception : répétiteur IA hors connexion pour les enfants, avec un modèle local sur le téléphone.</span></li>
+            <li><span class="mono">Figcody</span><span>Plugin Figma qui génère un projet React et Tailwind à partir d'une maquette, grâce à Claude.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Méthode -->
+    <section class="section" id="methode" aria-labelledby="method-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow mono">03 · Méthode</p>
+          <h2 id="method-title">Une méthode prévisible pour des projets qui ne le sont pas.</h2>
+        </header>
+        <ol class="steps">
+          <li><span class="step-n mono">01</span><h3>Comprendre</h3><p>Le besoin réel, les utilisateurs, et ce que « réussi » veut dire, avant la première ligne de code.</p></li>
+          <li><span class="step-n mono">02</span><h3>Auditer l'existant</h3><p>Ce qui marche, ce qui casse, ce qui manque. Sur Adsquid, l'audit a révélé une migration qui n'existait pas.</p></li>
+          <li><span class="step-n mono">03</span><h3>Découper</h3><p>Des parcours concrets et des étapes vérifiables, plutôt qu'un grand chantier.</p></li>
+          <li><span class="step-n mono">04</span><h3>Construire et tester</h3><p>De petits morceaux testables. Chaque bug corrigé devient un test pour qu'il ne revienne pas.</p></li>
+          <li><span class="step-n mono">05</span><h3>Mettre en production</h3><p>Images Docker, déploiement vérifié avant la bascule, retour arrière prêt.</p></li>
+          <li><span class="step-n mono">06</span><h3>Surveiller et transmettre</h3><p>Sentry sur le frontend et le backend, documentation, et une passation claire.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Parcours -->
+    <section class="section section-alt" id="parcours" aria-labelledby="path-title">
+      <div class="wrap path-grid">
+        <header class="section-head">
+          <p class="eyebrow mono">04 · Parcours</p>
+          <h2 id="path-title">En production depuis 2019.</h2>
+          <p class="section-intro">Web, mobile, TV et backend, pour des clients au Cameroun et en Europe.</p>
+          <a class="btn btn-ghost" href="assets/cv-paul-messanga.pdf" download>Télécharger mon CV <span class="meta">PDF</span></a>
+        </header>
+        <div>
+          <ol class="timeline">
+            <li><span class="t-year mono">2025 – 2026</span><div><h3>Développeur full-stack, missions freelance</h3><p>Adsquid, Utando, Epiltech, Snow Volican.</p></div></li>
+            <li><span class="t-year mono">2026</span><div><h3>Développeur full-stack, WebPackSolution</h3><p>CRM immobilier, pipeline de ventes et agent IA.</p></div></li>
+            <li><span class="t-year mono">2025 – 2026</span><div><h3>Développeur mobile, One2All.TV</h3><p>StackZ et One2All TV, sur TV et mobile.</p></div></li>
+            <li><span class="t-year mono">2021 – 2026</span><div><h3>Team Lead Frontend, Kevmax</h3><p>Encadrement de l'équipe frontend, Docta, Cooltchop.</p></div></li>
+            <li><span class="t-year mono">2019 – 2021</span><div><h3>Premières expériences</h3><p>DRMIDT-CE (stage) et Lynsey.be.</p></div></li>
+          </ol>
+          <h3 class="sub-title">Formation</h3>
+          <ul class="edu">
+            <li><strong>Certifications cloud</strong><span>Parcours KodeKloud en cours</span></li>
+            <li><strong>EGEM</strong><span>Diplôme d'ingénieur, 2016 – 2021</span></li>
+            <li><strong>freeCodeCamp</strong><span>300 h, 2021</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <p class="eyebrow mono">05 · Contact</p>
+        <h2 id="contact-title">Un produit à reprendre, à fiabiliser ou à mettre en production ?</h2>
+        <p class="lead">Dites-moi où en est le projet et ce qui vous bloque. Je reviens vers vous rapidement.</p>
+        <div class="actions">
+          <a class="btn btn-invert" href="mailto:ndazoomessanga@gmail.com?subject=Prise%20de%20contact%20depuis%20votre%20portfolio">Écrire un e-mail</a>
+          <a class="btn btn-ghost-invert" href="https://www.linkedin.com/in/paul-messanga-954a711b3" rel="noopener" target="_blank">LinkedIn</a>
+          <a class="btn btn-ghost-invert" href="https://github.com/Messanga11" rel="noopener" target="_blank">GitHub</a>
+        </div>
+        <ul class="contact-list mono">
+          <li>ndazoomessanga@gmail.com</li>
+          <li><a href="tel:+237698105092">+237 698 10 50 92</a></li>
+          <li>Yaoundé, Cameroun</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span data-year>2026</span> Paul Messanga</p>
+      <p class="mono">Fait à la main : HTML, CSS et un peu de JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
