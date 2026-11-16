@@ -1,0 +1,234 @@
+{
+  "lang": "en",
+  "ogLocale": "en_US",
+  "path": "/en/",
+  "meta": {
+    "title": "Paul Messanga — Lead full-stack developer in Yaoundé (Node.js, PostgreSQL, React Native)",
+    "description": "Lead full-stack developer in Yaoundé, Cameroon. I build your product from scratch or take over your existing code, secure the critical paths and ship to production: web, mobile, TV, push notifications.",
+    "ogTitle": "Paul Messanga — Your software has to hold up in production",
+    "ogDescription": "From idea to production, or from inherited code to a reliable product. Node.js, PostgreSQL, Docker, React Native, push notifications.",
+    "ogAlt": "Paul Messanga, lead full-stack developer in Yaoundé",
+    "jobTitle": "Lead full-stack developer"
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "home": "Paul Messanga, back to top",
+    "navLabel": "Main navigation",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "langLabel": "Lire en français",
+    "langShort": "FR",
+    "themeLight": "Theme: light. Switch to dark",
+    "themeDark": "Theme: dark. Follow system",
+    "themeSystem": "Theme: system. Switch to light",
+    "contactCta": "Let's talk",
+    "next": "Next step",
+    "barNext": "Next:",
+    "barTalk": "Let's talk",
+    "barWhatsApp": "Message on WhatsApp",
+    "proof": "Proof",
+    "fix": "What I do",
+    "cvLabel": "Download my CV",
+    "cvMeta": "PDF, in French",
+    "external": "opens in a new tab",
+    "footer": "Handmade: HTML, CSS and a little JavaScript, no framework."
+  },
+  "nav": [
+    { "href": "#scratch", "label": "Your problems" },
+    { "href": "#more", "label": "Projects" },
+    { "href": "#method", "label": "Method" },
+    { "href": "#path", "label": "Background" }
+  ],
+  "hero": {
+    "status": "Available at short notice, Yaoundé, Cameroon",
+    "title": "Your software has to hold up in production. I make sure it does",
+    "lead": "Lead full-stack developer since 2019. I build your product from scratch or take over what exists, I secure what matters to your customers, and I ship it to production. Web, mobile, TV.",
+    "primary": "Tell me what's broken",
+    "secondary": "Which of these problems sounds like yours?",
+    "mascot": "Web, mobile, TV: I adapt",
+    "chipsLabel": "Pick your situation",
+    "chips": [
+      { "href": "#scratch", "label": "Nothing is built yet" },
+      { "href": "#broken", "label": "It breaks in production" },
+      { "href": "#legacy", "label": "Unreadable inherited code" },
+      { "href": "#slow", "label": "Users leave" },
+      { "href": "#push", "label": "Notifications don't arrive" }
+    ],
+    "figures": [
+      { "n": "344", "t": "end-to-end tests on Adsquid's critical paths" },
+      { "n": "10", "t": "production releases led with blue-green deploys" },
+      { "n": "5,000+", "t": "Cooltchop downloads on Google Play" },
+      { "n": "3 stores", "t": "Google Play, App Store and Amazon Appstore" }
+    ]
+  },
+  "problems": [
+    {
+      "id": "scratch",
+      "icon": "rocket",
+      "short": "Start from scratch",
+      "eyebrow": "Problem 1 of 5",
+      "title": "You have an idea, but nothing is built yet",
+      "agitate": "Every month without a product is a month handed to your competitors. And a wrong technical choice at the start costs you for years: an app to rewrite, payments that fail, a team blocked by its own architecture.",
+      "fixes": [
+        "I start from your real need and scope a first useful version",
+        "I design the architecture: API, database, web and mobile apps",
+        "I build what makes the product live: payments, notifications, real time",
+        "I publish to the stores and ship to production, with the tests"
+      ],
+      "proofs": [
+        { "name": "Utando", "meta": "Freelance · live", "text": "Logistics platform designed from scratch: Node.js / Fastify API on PostgreSQL, 3 Expo apps and a React back office, MTN MoMo and Orange Money payments, a payouts ledger, background jobs and geolocation.", "links": [{ "href": "https://partner.randyetlynn.com", "label": "partner.randyetlynn.com" }, { "href": "https://admin.randyetlynn.com", "label": "admin.randyetlynn.com" }] },
+        { "name": "Cooltchop", "meta": "Kevmax · on the stores", "text": "Food delivery built end to end: the PHP / Slim API, the React Native app and the web version. Over 5,000 downloads on Google Play.", "links": [{ "href": "https://cooltchop.com/", "label": "cooltchop.com" }] },
+        { "name": "Snow Volican", "meta": "Freelance · 2025", "text": "Events platform built alone: FastAPI on PostgreSQL, React front end, Stripe payments, Sentry on front and back end.", "links": [] }
+      ],
+      "next": { "href": "#broken", "label": "Your product exists, but it keeps breaking?" }
+    },
+    {
+      "id": "broken",
+      "icon": "bug",
+      "short": "Breaks in production",
+      "eyebrow": "Problem 2 of 5",
+      "title": "Your app breaks in production",
+      "agitate": "Every release becomes a gamble. Payment fails on a Friday night, your customers notice before you do, and the team spends the week fighting fires instead of moving forward.",
+      "fixes": [
+        "End-to-end tests on the paths that bring money: signup, cart, payment",
+        "Docker images built by GitHub Actions, identical in test and production",
+        "A release checked before the switch, with instant rollback",
+        "Sentry on front end and back end, to see the error before the customer does"
+      ],
+      "proofs": [
+        { "name": "Adsquid", "meta": "Freelance · live", "text": "344 Playwright tests on signup, cart and Stripe / PayPal payment. 10 production releases with blue-green deploys and instant rollback.", "links": [{ "href": "https://adsquid.fr/", "label": "adsquid.fr" }] },
+        { "name": "Snow Volican", "meta": "Freelance · 2025", "text": "Zero-downtime deploys: several instances behind Nginx, health checks, one instance updated at a time, triggered by GitHub Actions.", "links": [] },
+        { "name": "Real-estate CRM", "meta": "WebPackSolution · live", "text": "290 test files covering login, two-factor authentication, roles and client identity checks.", "links": [{ "href": "https://www.exclusivealgarvevillas.com/fr", "label": "exclusivealgarvevillas.com" }] }
+      ],
+      "next": { "href": "#legacy", "label": "The code is there, but nobody understands it?" }
+    },
+    {
+      "id": "legacy",
+      "icon": "search",
+      "short": "Inherited code",
+      "eyebrow": "Problem 3 of 5",
+      "title": "You inherited code nobody understands",
+      "agitate": "Every change breaks something else. The original developer is gone, the announced migration was never really done, and your roadmap moves at the pace of regressions.",
+      "fixes": [
+        "I audit what exists: what works, what breaks, what's missing",
+        "I turn the audit into a migration plan in small, verifiable steps",
+        "I put tests in place as a safety net before touching the core",
+        "Every fixed bug becomes an automatic rule so it never comes back"
+      ],
+      "proofs": [
+        { "name": "Adsquid", "meta": "Taking over an existing platform", "text": "Audited 10 modules, 563 columns and 262 business rules: only 9 columns were actually migrated. The audit became the migration plan to Payload CMS and Next.js on PostgreSQL.", "links": [] },
+        { "name": "Epiltech", "meta": "Freelance", "text": "Shop and training courses migrated from Prisma to Payload on PostgreSQL, with the whole infrastructure self-hosted on Docker Compose and daily backups.", "links": [] }
+      ],
+      "next": { "href": "#slow", "label": "It works, but it's slow?" }
+    },
+    {
+      "id": "slow",
+      "icon": "gauge",
+      "short": "Users leave",
+      "eyebrow": "Problem 4 of 5",
+      "title": "Your users wait, then leave",
+      "agitate": "Three seconds too many, a network drop, a stuttering screen: users don't complain, they uninstall. And you never find out.",
+      "fixes": [
+        "I measure before and after every fix, to prove the gain",
+        "I cut what the app redraws and what it downloads",
+        "I design for unstable networks and small phones",
+        "I set up real time properly: WebRTC, sockets, STOMP"
+      ],
+      "proofs": [
+        { "name": "StackZ and One2All TV", "meta": "Sole developer of the TV and mobile apps", "text": "A remote-control move redraws 2 cards instead of about 14, measured with Flashlight. WebRTC live video, STOMP real time, Picture-in-Picture, published on 3 stores.", "links": [{ "href": "https://stackz.gg/", "label": "stackz.gg" }] },
+        { "name": "Docta", "meta": "Kevmax · telemedicine", "text": "Flutter app with real-time chat over sockets and a map of nearby practitioners.", "links": [{ "href": "https://doctaapp.fr/", "label": "doctaapp.fr" }] }
+      ],
+      "next": { "href": "#push", "label": "And when your messages don't arrive?" }
+    },
+    {
+      "id": "push",
+      "icon": "bell",
+      "short": "Notifications",
+      "eyebrow": "Problem 5 of 5",
+      "title": "Your notifications don't arrive, or they annoy",
+      "agitate": "A driver misses a ride, a payment is confirmed without anyone knowing, or the app sends so many messages that your users turn everything off.",
+      "fixes": [
+        "Reliable push notifications on Android and iOS",
+        "Android channels and per-type preferences",
+        "Scheduled reminders with a frequency cap",
+        "Email and calendar when push isn't the right channel"
+      ],
+      "proofs": [
+        { "name": "Utando", "meta": "Push notifications · OneSignal", "text": "Push on the driver, partner and traveler apps and the back office, with Android notification channels.", "links": [] },
+        { "name": "Karreer", "meta": "Personal product", "text": "Push notifications with cron-scheduled reminders and a frequency cap, so users are never flooded.", "links": [] },
+        { "name": "Real-estate CRM", "meta": "WebPackSolution", "text": "Scheduled visits with email notifications and a calendar invite, and a first contact required within 4 hours for every lead.", "links": [] }
+      ],
+      "next": { "href": "#contact", "label": "Sound familiar? Let's talk about it" }
+    }
+  ],
+  "more": {
+    "eyebrow": "Other projects",
+    "title": "More products, same standard",
+    "cards": [
+      { "name": "Carla+", "meta": "Next.js · FastAPI", "text": "AI hair diagnostics turned into a simple path, from the first question to the recommended product.", "href": "https://carlaplus.com/fr/", "label": "carlaplus.com" },
+      { "name": "ChezBio", "meta": "Web and mobile", "text": "E-commerce for organic products and locally made machines.", "href": "https://www.chezbio.com/", "label": "chezbio.com" },
+      { "name": "OuiSpeak", "meta": "Web", "text": "Remote interpretation for multilingual meetings and events.", "href": "https://ouispeak.io/fr/", "label": "ouispeak.io" }
+    ],
+    "ossTitle": "Open source and personal products",
+    "oss": [
+      { "name": "Messanga11/core", "href": "https://github.com/Messanga11/core", "text": "Multi-tenant TypeScript core on PostgreSQL, CI on real PostgreSQL and Redis" },
+      { "name": "create-messanga11-app", "href": "https://github.com/Messanga11/create-messanga11-app", "text": "Generates a ready-to-use Next.js and Expo monorepo" },
+      { "name": "formbuilder", "href": "https://github.com/Messanga11/formbuilder", "text": "Headless, extensible React forms" },
+      { "name": "table-page", "href": "https://github.com/Messanga11/table-page", "text": "Headless CRUD table pages" },
+      { "name": "Filjuste", "href": "", "text": "AI video studio with a spending cap, and a land sales website" },
+      { "name": "Ralph", "href": "", "text": "My autonomous app-building system: it writes the specs and their tests, then builds. Karreer was built with it" },
+      { "name": "Yegle", "href": "", "text": "In design: an offline AI tutor for children" },
+      { "name": "Figcody", "href": "", "text": "Figma plugin that generates a React and Tailwind project with Claude" }
+    ],
+    "next": { "href": "#method", "label": "How I work" }
+  },
+  "method": {
+    "eyebrow": "Method",
+    "title": "A predictable method for unpredictable projects",
+    "steps": [
+      { "t": "Understand", "d": "The real need, the users, and what success means" },
+      { "t": "Audit or design", "d": "The existing code if there is any, otherwise the simplest architecture that holds" },
+      { "t": "Break it down", "d": "Concrete user paths and verifiable steps" },
+      { "t": "Build and test", "d": "Small tested pieces, every bug becomes a test" },
+      { "t": "Ship to production", "d": "Docker, checks before the switch, rollback ready" },
+      { "t": "Monitor and hand over", "d": "Sentry, documentation, a clear handover" }
+    ],
+    "next": { "href": "#path", "label": "My background" }
+  },
+  "path": {
+    "eyebrow": "Background",
+    "title": "Shipping to production since 2019",
+    "intro": "Web, mobile, TV and back end, for clients in Cameroon and Europe.",
+    "items": [
+      { "y": "2025 – 2026", "t": "Full-stack developer, freelance", "d": "Adsquid, Utando, Epiltech, Snow Volican" },
+      { "y": "2026", "t": "Full-stack developer, WebPackSolution", "d": "Real-estate CRM, sales pipeline, AI agent" },
+      { "y": "2025 – 2026", "t": "Mobile developer, One2All.TV", "d": "StackZ and One2All TV, on TV and mobile" },
+      { "y": "2021 – 2026", "t": "Frontend Team Lead, Kevmax", "d": "Frontend team lead, Docta, Cooltchop" },
+      { "y": "2019 – 2021", "t": "Early experience", "d": "DRMIDT-CE (internship) and Lynsey.be" }
+    ],
+    "eduTitle": "Education",
+    "edu": [
+      { "t": "Cloud certifications", "d": "KodeKloud path in progress" },
+      { "t": "EGEM", "d": "Engineering degree, 2016 – 2021" },
+      { "t": "freeCodeCamp", "d": "300 hours, 2021" }
+    ],
+    "next": { "href": "#contact", "label": "Let's get to your project" }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Tell me what's blocking you",
+    "lead": "An idea to build, an app that breaks, code to take over: describe the situation in a few lines. I'll get back to you quickly with a first lead.",
+    "email": "Send an email",
+    "emailSubject": "My project",
+    "whatsapp": "WhatsApp",
+    "whatsappText": "Hi Paul, I have a project to tell you about:",
+    "phone": "Call",
+    "cv": "CV (PDF, in French)",
+    "mascot": "Your move"
+  },
+  "notFound": {
+    "title": "This page isn't in production",
+    "text": "The link may be old. The rest of the site works fine.",
+    "back": "Back to home"
+  }
+}
