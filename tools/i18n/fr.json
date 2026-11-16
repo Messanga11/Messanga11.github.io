@@ -248,7 +248,10 @@
           "PostgreSQL",
           "Docker"
         ],
-        "link": null,
+        "link": {
+          "href": "https://epiltech-shop.be/",
+          "label": "epiltech-shop.be"
+        },
         "ui": {
           "title": "Formation",
           "days": [
