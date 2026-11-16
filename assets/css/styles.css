@@ -318,7 +318,7 @@ a { color: inherit; }
 .section-cta { margin-top: var(--s-7); }
 
 /* Work: varied card sizes, each with a small product screen --------------- */
-.work { display: grid; gap: var(--s-4); perspective: 1400px; }
+.work { display: grid; gap: var(--s-4); }
 @media (min-width: 44rem) {
   .work { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .work-stackz, .work-dermora { grid-column: 1 / -1; }
@@ -332,12 +332,11 @@ a { color: inherit; }
   .work-dermora .work-inner { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
   .work-dermora .work-screen { height: 100%; aspect-ratio: auto; min-height: 280px; }
 }
-.work-card { transform-style: preserve-3d; }
 .work-inner {
   --rx: 0deg; --ry: 0deg; --lift: 0px;
   height: 100%; display: flex; flex-direction: column;
   padding: var(--s-2); border-radius: var(--r-card); background: var(--surface); border: 1px solid var(--line);
-  transform: translateY(var(--lift)) rotateX(var(--rx)) rotateY(var(--ry));
+  transform: perspective(1400px) translateY(var(--lift)) rotateX(var(--rx)) rotateY(var(--ry));
   transition: transform var(--d-2) var(--ease), border-color var(--d-2) var(--ease), box-shadow var(--d-2) var(--ease);
 }
 .work-card:hover .work-inner, .work-card:focus-within .work-inner { --lift: -4px; border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); box-shadow: var(--shadow-lift); }
