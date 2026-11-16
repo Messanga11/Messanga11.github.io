@@ -10,12 +10,11 @@ export function initReveal(motion) {
       observer.unobserve(entry.target);
     }
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-  for (const el of items) {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight * 0.92) el.classList.add('in');
-    observer.observe(el);
-  }
   document.documentElement.classList.add('reveal-ready');
+  // Observe on the next frame so elements already on screen animate in too.
+  requestAnimationFrame(() => {
+    for (const el of items) observer.observe(el);
+  });
 
   // Touch screens have no hover: play each simulated app once when it is in view.
   if (window.matchMedia('(hover: hover)').matches) return;

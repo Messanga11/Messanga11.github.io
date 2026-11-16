@@ -179,7 +179,7 @@ export const page = (t, alt) => {
             <a class="btn btn-ghost" href="#work">${e(t.hero.secondary)}${icon('arrow-down', 'btn-arrow')}</a>
           </div>
         </div>
-        <figure class="hero-art">
+        <figure class="hero-art" data-reveal>
           <div class="notif" aria-hidden="true">
             <span class="notif-icon">${icon('bell')}</span>
             <span class="notif-text"><span class="notif-meta">${e(t.hero.notif.app)} · ${e(t.hero.notif.time)}</span><strong>${e(t.hero.notif.title)}</strong><span>${e(t.hero.notif.body)}</span></span>
@@ -188,7 +188,7 @@ export const page = (t, alt) => {
         </figure>
       </div>
       <div class="wrap">
-        <dl class="figures">${t.hero.figures.map((f) => `<div><dt>${e(f.n)}</dt><dd>${e(f.t)}</dd></div>`).join('')}</dl>
+        <dl class="figures">${t.hero.figures.map((f, i) => `<div data-reveal style="--i:${i}"><dt data-count>${e(f.n)}</dt><dd>${e(f.t)}</dd></div>`).join('')}</dl>
       </div>
     </section>
 

@@ -484,11 +484,11 @@ a { color: inherit; }
 
 /* Motion (only when allowed and JS runs) ----------------------------------- */
 
-.reveal-ready.motion-ok [data-reveal] { opacity: 0; transform: translateY(18px); }
+.reveal-ready.motion-ok [data-reveal]:not(.in) { opacity: 0; transform: translateY(40px) scale(.98); }
 .reveal-ready.motion-ok [data-reveal].in {
   opacity: 1; transform: none;
-  transition: opacity .6s var(--ease), transform .6s var(--ease);
-  transition-delay: calc(var(--i, 0) * 70ms);
+  transition: opacity .7s var(--ease), transform .7s var(--ease);
+  transition-delay: calc(var(--i, 0) * 90ms);
 }
 .motion-ok .hero-copy > * { animation: rise .7s var(--ease) both; }
 .motion-ok .hero-copy > :nth-child(2) { animation-delay: 80ms; }
