@@ -1,7 +1,11 @@
 // Page template shared by the FR and EN pages. Every string comes from
 // tools/i18n/<lang>.json and is HTML-escaped by `e`.
+import { readFileSync } from 'node:fs';
 import { icon, sprite } from './icons.mjs';
 import { brandIcon, brandSprite } from './brands.mjs';
+
+// Inlined so the scene colours follow the page theme tokens (--art-*).
+const HERO_ART = readFileSync(new URL('../art/hero.svg', import.meta.url), 'utf8').trim();
 
 export const SITE = 'https://paul-messanga.ndazoomessanga.workers.dev';
 const PHONE = '+237698105092';
@@ -184,7 +188,7 @@ export const page = (t, alt) => {
             <span class="notif-icon">${icon('bell')}</span>
             <span class="notif-text"><span class="notif-meta">${e(t.hero.notif.app)} · ${e(t.hero.notif.time)}</span><strong>${e(t.hero.notif.title)}</strong><span>${e(t.hero.notif.body)}</span></span>
           </div>
-          <img src="/assets/img/hero-character.svg" width="360" height="640" alt="" fetchpriority="high" decoding="async">
+          ${HERO_ART}
         </figure>
       </div>
       <div class="wrap">
