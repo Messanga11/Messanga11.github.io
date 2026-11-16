@@ -1,7 +1,53 @@
 {
   "lang": "fr",
   "ogLocale": "fr_FR",
-  "path": "/",
+  "path": {
+    "eyebrow": "Parcours",
+    "title": "En production depuis 2019",
+    "intro": "Web, mobile, TV et backend, pour des clients au Cameroun et en Europe.",
+    "items": [
+      {
+        "y": "2025 – 2026",
+        "t": "Développeur full-stack, missions freelance",
+        "d": "Adsquid, Utando, Epiltech, Snow Volican"
+      },
+      {
+        "y": "2026",
+        "t": "Développeur full-stack, WebPackSolution",
+        "d": "CRM immobilier, pipeline de ventes, agent IA"
+      },
+      {
+        "y": "2025 – 2026",
+        "t": "Développeur mobile, One2All.TV",
+        "d": "StackZ et One2All TV, sur TV et mobile"
+      },
+      {
+        "y": "2021 – 2026",
+        "t": "Team Lead Frontend, Kevmax",
+        "d": "Docta, Cooltchop, encadrement de l'équipe frontend"
+      },
+      {
+        "y": "2019 – 2021",
+        "t": "Premières expériences",
+        "d": "DRMIDT-CE (stage) et Lynsey.be"
+      }
+    ],
+    "eduTitle": "Formation",
+    "edu": [
+      {
+        "t": "Certifications cloud",
+        "d": "Parcours KodeKloud en cours"
+      },
+      {
+        "t": "EGEM",
+        "d": "Diplôme d'ingénieur, 2016 – 2021"
+      },
+      {
+        "t": "freeCodeCamp",
+        "d": "300 h, 2021"
+      }
+    ]
+  },
   "meta": {
     "title": "Paul Messanga — Lead développeur full-stack à Yaoundé (web, mobile, TV)",
     "description": "Lead développeur full-stack à Yaoundé. Je construis votre app de zéro ou je reprends l'existant, et je la fais tenir face à vos vrais clients : web, mobile, TV, paiements, notifications push.",
@@ -31,10 +77,22 @@
     "footer": "Fait à la main, sans framework."
   },
   "nav": [
-    { "href": "#services", "label": "Ce que je règle" },
-    { "href": "#work", "label": "Réalisations" },
-    { "href": "#method", "label": "Méthode" },
-    { "href": "#path", "label": "Parcours" }
+    {
+      "href": "#services",
+      "label": "Ce que je règle"
+    },
+    {
+      "href": "#work",
+      "label": "Réalisations"
+    },
+    {
+      "href": "#method",
+      "label": "Méthode"
+    },
+    {
+      "href": "#path",
+      "label": "Parcours"
+    }
   ],
   "hero": {
     "status": "Disponible rapidement, Yaoundé",
@@ -44,21 +102,59 @@
     "secondary": "Voir mes réalisations",
     "mascot": "Web, mobile, TV : je m'adapte",
     "figures": [
-      { "n": "344", "t": "tests automatiques sur le paiement et l'inscription d'Adsquid" },
-      { "n": "5 000+", "t": "téléchargements de Cooltchop sur Google Play" },
-      { "n": "3 stores", "t": "Google Play, App Store et Amazon Appstore" },
-      { "n": "10", "t": "mises en production pilotées, retour arrière toujours prêt" }
-    ]
+      {
+        "n": "344",
+        "t": "tests automatiques sur le paiement et l'inscription d'Adsquid"
+      },
+      {
+        "n": "5 000+",
+        "t": "téléchargements de Cooltchop sur Google Play"
+      },
+      {
+        "n": "3 stores",
+        "t": "Google Play, App Store et Amazon Appstore"
+      },
+      {
+        "n": "10",
+        "t": "mises en production pilotées, retour arrière toujours prêt"
+      }
+    ],
+    "photoAlt": "Paul Messanga"
   },
   "services": {
     "eyebrow": "Ce que je règle",
     "title": "Ce qui fait partir vos clients, je le règle",
     "items": [
-      { "icon": "rocket", "title": "Votre idée n'existe pas encore", "pain": "Chaque mois sans produit profite à vos concurrents, et un mauvais choix technique au départ se paie pendant des années.", "promise": "Une première version utile, une architecture qui tient, et la publication sur les stores." },
-      { "icon": "bug", "title": "Votre app casse en production", "pain": "Le paiement échoue un vendredi soir et vos clients le voient avant vous.", "promise": "Tests automatiques sur les parcours qui rapportent, mises en production vérifiées, retour arrière immédiat." },
-      { "icon": "search", "title": "Personne ne comprend plus le code", "pain": "Chaque correction en casse une autre, et la migration annoncée n'a jamais été faite.", "promise": "Un audit clair, un plan de migration par petites étapes, et des tests comme filet de sécurité." },
-      { "icon": "gauge", "title": "Vos utilisateurs attendent, puis partent", "pain": "Trois secondes de trop ou un réseau qui coupe : ils désinstallent sans prévenir.", "promise": "Des écrans qui répondent, même sur un petit téléphone et un réseau instable." },
-      { "icon": "bell", "title": "Vos notifications n'arrivent pas", "pain": "Une course manquée, un paiement confirmé sans que personne ne le sache, ou trop de messages et l'app est coupée.", "promise": "Des notifications push fiables, rangées par canal, avec des rappels qui ne lassent pas." }
+      {
+        "icon": "rocket",
+        "title": "Votre idée n'existe pas encore",
+        "pain": "Chaque mois sans produit profite à vos concurrents, et un mauvais choix technique au départ se paie pendant des années.",
+        "promise": "Une première version utile, une architecture qui tient, et la publication sur les stores."
+      },
+      {
+        "icon": "bug",
+        "title": "Votre app casse en production",
+        "pain": "Le paiement échoue un vendredi soir et vos clients le voient avant vous.",
+        "promise": "Tests automatiques sur les parcours qui rapportent, mises en production vérifiées, retour arrière immédiat."
+      },
+      {
+        "icon": "search",
+        "title": "Personne ne comprend plus le code",
+        "pain": "Chaque correction en casse une autre, et la migration annoncée n'a jamais été faite.",
+        "promise": "Un audit clair, un plan de migration par petites étapes, et des tests comme filet de sécurité."
+      },
+      {
+        "icon": "gauge",
+        "title": "Vos utilisateurs attendent, puis partent",
+        "pain": "Trois secondes de trop ou un réseau qui coupe : ils désinstallent sans prévenir.",
+        "promise": "Des écrans qui répondent, même sur un petit téléphone et un réseau instable."
+      },
+      {
+        "icon": "bell",
+        "title": "Vos notifications n'arrivent pas",
+        "pain": "Une course manquée, un paiement confirmé sans que personne ne le sache, ou trop de messages et l'app est coupée.",
+        "promise": "Des notifications push fiables, rangées par canal, avec des rappels qui ne lassent pas."
+      }
     ],
     "cta": "Voir ce que j'ai livré"
   },
@@ -67,46 +163,148 @@
     "title": "Des produits livrés, utilisés tous les jours",
     "projects": [
       {
-        "id": "stackz", "kind": "tv", "meta": "One2All.TV · seul développeur TV et mobile", "name": "StackZ",
+        "id": "stackz",
+        "kind": "tv",
+        "meta": "One2All.TV · seul développeur TV et mobile",
+        "name": "StackZ",
         "result": "Une app de direct fluide à la télécommande : chaque déplacement redessine 2 cartes au lieu d'environ 14. Publiée sur Google Play, l'App Store et l'Amazon Appstore.",
-        "tags": ["React Native", "Android TV", "WebRTC"],
-        "link": { "href": "https://stackz.gg/", "label": "stackz.gg" },
-        "ui": { "row": "À la une", "live": "En direct", "tiles": ["Lifestyle", "Films", "Sport", "Téléréalité", "Jeux"] }
+        "tags": [
+          "React Native",
+          "Android TV",
+          "WebRTC"
+        ],
+        "link": {
+          "href": "https://stackz.gg/",
+          "label": "stackz.gg"
+        },
+        "ui": {
+          "row": "À la une",
+          "live": "En direct",
+          "tiles": [
+            "Lifestyle",
+            "Films",
+            "Sport",
+            "Téléréalité",
+            "Jeux"
+          ]
+        }
       },
       {
-        "id": "adsquid", "kind": "checkout", "meta": "Mission freelance · reprise de code existant", "name": "Adsquid",
+        "id": "adsquid",
+        "kind": "checkout",
+        "meta": "Mission freelance · reprise de code existant",
+        "name": "Adsquid",
         "result": "Une plateforme reprise, auditée puis sécurisée : 344 tests automatiques sur l'inscription, le panier et le paiement, et 10 mises en production avec retour arrière prêt.",
-        "tags": ["Next.js", "PostgreSQL", "Stripe", "PayPal"],
-        "link": { "href": "https://adsquid.fr/", "label": "adsquid.fr" },
-        "ui": { "title": "Commande", "lines": ["Inscription", "Panier", "Paiement"], "status": "344 tests passés" }
+        "tags": [
+          "Next.js",
+          "PostgreSQL",
+          "Stripe",
+          "PayPal"
+        ],
+        "link": {
+          "href": "https://adsquid.fr/",
+          "label": "adsquid.fr"
+        },
+        "ui": {
+          "title": "Commande",
+          "lines": [
+            "Inscription",
+            "Panier",
+            "Paiement"
+          ],
+          "status": "344 tests passés"
+        }
       },
       {
-        "id": "docta", "kind": "chat", "meta": "Kevmax · télémédecine", "name": "Docta",
+        "id": "docta",
+        "kind": "chat",
+        "meta": "Kevmax · télémédecine",
+        "name": "Docta",
         "result": "Rendez-vous, téléconsultation et second avis médical au Cameroun, avec paiement MTN MoMo et Orange Money et un chat en temps réel avec le médecin.",
-        "tags": ["Flutter", "Temps réel", "Mobile Money"],
-        "link": { "href": "https://doctaapp.fr/", "label": "doctaapp.fr" },
-        "ui": { "doctor": "Dr. Ngo", "msgIn": "Bonjour, comment vous sentez-vous ?", "msgOut": "Mieux depuis hier", "action": "Rejoindre la consultation" }
+        "tags": [
+          "Flutter",
+          "Temps réel",
+          "Mobile Money"
+        ],
+        "link": {
+          "href": "https://doctaapp.fr/",
+          "label": "doctaapp.fr"
+        },
+        "ui": {
+          "doctor": "Dr. Ngo",
+          "msgIn": "Bonjour, comment vous sentez-vous ?",
+          "msgOut": "Mieux depuis hier",
+          "action": "Rejoindre la consultation"
+        }
       },
       {
-        "id": "epiltech", "kind": "calendar", "meta": "Mission freelance · boutique et formations", "name": "Epiltech",
+        "id": "epiltech",
+        "kind": "calendar",
+        "meta": "Mission freelance · boutique et formations",
+        "name": "Epiltech",
         "result": "Une boutique migrée sans tout réécrire, des formations réservées avec acompte, et une infrastructure auto-hébergée sauvegardée chaque jour.",
-        "tags": ["Payload", "PostgreSQL", "Docker"],
+        "tags": [
+          "Payload",
+          "PostgreSQL",
+          "Docker"
+        ],
         "link": null,
-        "ui": { "title": "Formation", "days": ["L", "M", "M", "J", "V"], "booked": "Acompte payé" }
+        "ui": {
+          "title": "Formation",
+          "days": [
+            "L",
+            "M",
+            "M",
+            "J",
+            "V"
+          ],
+          "booked": "Acompte payé"
+        }
       },
       {
-        "id": "cooltchop", "kind": "order", "meta": "Kevmax · de bout en bout", "name": "Cooltchop",
+        "id": "cooltchop",
+        "kind": "order",
+        "meta": "Kevmax · de bout en bout",
+        "name": "Cooltchop",
         "result": "La commande de repas au Cameroun, pensée pour les réseaux qui coupent : API, app mobile et site web. Plus de 5 000 téléchargements.",
-        "tags": ["React Native", "PHP / Slim", "Web"],
-        "link": { "href": "https://cooltchop.com/", "label": "cooltchop.com" },
-        "ui": { "steps": ["Commandée", "En préparation", "En route", "Livrée"] }
+        "tags": [
+          "React Native",
+          "PHP / Slim",
+          "Web"
+        ],
+        "link": {
+          "href": "https://cooltchop.com/",
+          "label": "cooltchop.com"
+        },
+        "ui": {
+          "steps": [
+            "Commandée",
+            "En préparation",
+            "En route",
+            "Livrée"
+          ]
+        }
       },
       {
-        "id": "dermora", "kind": "scan", "meta": "Produit personnel · mobile et IA", "name": "Dermora",
+        "id": "dermora",
+        "kind": "scan",
+        "meta": "Produit personnel · mobile et IA",
+        "name": "Dermora",
         "result": "L'analyse de peau guidée par l'IA, de la capture du visage au conseil personnalisé, dans une app mobile simple à suivre.",
-        "tags": ["React Native", "ML Kit", "Fastify"],
+        "tags": [
+          "React Native",
+          "ML Kit",
+          "Fastify"
+        ],
         "link": null,
-        "ui": { "title": "Analyse", "steps": ["Questionnaire", "Capture", "Résultat"] }
+        "ui": {
+          "title": "Analyse",
+          "steps": [
+            "Questionnaire",
+            "Capture",
+            "Résultat"
+          ]
+        }
       }
     ],
     "cta": "Parlons de votre projet"
@@ -114,42 +312,115 @@
   "more": {
     "title": "Aussi livrés",
     "items": [
-      { "name": "Utando", "text": "Plateforme logistique en production : 3 apps mobiles, notifications push, paiements Mobile Money", "href": "https://partner.randyetlynn.com", "label": "partner.randyetlynn.com" },
-      { "name": "CRM immobilier", "text": "Un premier contact sous 4 h pour chaque prospect, agent IA sur WhatsApp", "href": "https://www.exclusivealgarvevillas.com/fr", "label": "exclusivealgarvevillas.com" },
-      { "name": "Snow Volican", "text": "Plateforme d'événements conçue pour des mises en production sans coupure", "href": "", "label": "" },
-      { "name": "Carla+", "text": "Diagnostic capillaire par IA, de la question au produit", "href": "https://carlaplus.com/fr/", "label": "carlaplus.com" },
-      { "name": "ChezBio", "text": "E-commerce de produits bio, web et mobile", "href": "https://www.chezbio.com/", "label": "chezbio.com" },
-      { "name": "Open source", "text": "Socle multi-clients sur PostgreSQL, formulaires et tableaux React", "href": "https://github.com/Messanga11/core", "label": "github.com/Messanga11" }
+      {
+        "name": "Utando",
+        "text": "Plateforme logistique en production : 3 apps mobiles, notifications push, paiements Mobile Money",
+        "href": "https://partner.randyetlynn.com",
+        "label": "partner.randyetlynn.com"
+      },
+      {
+        "name": "CRM immobilier",
+        "text": "Un premier contact sous 4 h pour chaque prospect, agent IA sur WhatsApp",
+        "href": "https://www.exclusivealgarvevillas.com/fr",
+        "label": "exclusivealgarvevillas.com"
+      },
+      {
+        "name": "Snow Volican",
+        "text": "Plateforme d'événements conçue pour des mises en production sans coupure",
+        "href": "",
+        "label": ""
+      },
+      {
+        "name": "Carla+",
+        "text": "Diagnostic capillaire par IA, de la question au produit",
+        "href": "https://carlaplus.com/fr/",
+        "label": "carlaplus.com"
+      },
+      {
+        "name": "ChezBio",
+        "text": "E-commerce de produits bio, web et mobile",
+        "href": "https://www.chezbio.com/",
+        "label": "chezbio.com"
+      },
+      {
+        "name": "Open source",
+        "text": "Socle multi-clients sur PostgreSQL, formulaires et tableaux React",
+        "href": "https://github.com/Messanga11/core",
+        "label": "github.com/Messanga11"
+      }
     ]
   },
   "method": {
     "eyebrow": "Méthode",
     "title": "Pas de surprise, du premier appel à la mise en ligne",
+    "outLabel": "Vous recevez",
     "steps": [
-      { "t": "On parle de vos clients", "d": "Ce qu'ils doivent pouvoir faire, et ce que « réussi » veut dire pour vous" },
-      { "t": "Je regarde l'existant", "d": "Ou je dessine l'architecture la plus simple qui tiendra" },
-      { "t": "On avance par étapes", "d": "Des livraisons courtes que vous pouvez tester" },
-      { "t": "Je teste ce qui compte", "d": "Inscription, paiement, notifications : chaque bug corrigé devient un test" },
-      { "t": "Je mets en ligne sans risque", "d": "Vérification avant bascule, retour arrière prêt" },
-      { "t": "Je surveille et je transmets", "d": "Alertes d'erreurs, documentation, passation claire" }
-    ]
-  },
-  "path": {
-    "eyebrow": "Parcours",
-    "title": "En production depuis 2019",
-    "intro": "Web, mobile, TV et backend, pour des clients au Cameroun et en Europe.",
-    "items": [
-      { "y": "2025 – 2026", "t": "Développeur full-stack, missions freelance", "d": "Adsquid, Utando, Epiltech, Snow Volican" },
-      { "y": "2026", "t": "Développeur full-stack, WebPackSolution", "d": "CRM immobilier, pipeline de ventes, agent IA" },
-      { "y": "2025 – 2026", "t": "Développeur mobile, One2All.TV", "d": "StackZ et One2All TV, sur TV et mobile" },
-      { "y": "2021 – 2026", "t": "Team Lead Frontend, Kevmax", "d": "Docta, Cooltchop, encadrement de l'équipe frontend" },
-      { "y": "2019 – 2021", "t": "Premières expériences", "d": "DRMIDT-CE (stage) et Lynsey.be" }
-    ],
-    "eduTitle": "Formation",
-    "edu": [
-      { "t": "Certifications cloud", "d": "Parcours KodeKloud en cours" },
-      { "t": "EGEM", "d": "Diplôme d'ingénieur, 2016 – 2021" },
-      { "t": "freeCodeCamp", "d": "300 h, 2021" }
+      {
+        "icon": "message",
+        "t": "On parle de vos clients",
+        "d": "Un premier échange pour comprendre le besoin réel, avant toute ligne de code.",
+        "items": [
+          "Qui sont vos utilisateurs et ce qu'ils doivent pouvoir faire",
+          "Vos contraintes : délais, budget, stores, moyens de paiement",
+          "Ce que « réussi » veut dire pour vous"
+        ],
+        "out": "Un résumé écrit du besoin et des priorités"
+      },
+      {
+        "icon": "search",
+        "t": "J'étudie l'existant ou je conçois",
+        "d": "Selon votre situation, je pars de votre code ou d'une feuille blanche.",
+        "items": [
+          "App existante : lecture du code, de la base et des mises en production",
+          "Les risques classés du plus urgent au moins urgent",
+          "Nouveau projet : choix techniques, données, découpage web, mobile et API"
+        ],
+        "out": "Un plan d'action clair"
+      },
+      {
+        "icon": "list",
+        "t": "On découpe en étapes",
+        "d": "Pas de grand tunnel : chaque étape livre quelque chose que vous pouvez essayer.",
+        "items": [
+          "Les parcours essentiels d'abord : inscription, commande, paiement",
+          "Une étape courte à la fois, validée avec vous",
+          "Les priorités ajustées après chaque livraison"
+        ],
+        "out": "Un planning par étapes"
+      },
+      {
+        "icon": "code",
+        "t": "Je développe et je teste",
+        "d": "Le code avance par petites livraisons, avec des tests sur ce qui compte.",
+        "items": [
+          "Tests automatiques sur l'inscription, le paiement et les notifications",
+          "Chaque bug corrigé devient un test pour ne jamais revenir",
+          "Une version de test que vous ouvrez sur votre téléphone ou navigateur"
+        ],
+        "out": "Une version testable à chaque étape"
+      },
+      {
+        "icon": "rocket",
+        "t": "Je mets en ligne sans risque",
+        "d": "La mise en production est préparée, vérifiée et réversible.",
+        "items": [
+          "Images Docker construites automatiquement",
+          "Nouvelle version vérifiée avant la bascule, ancienne prête pour un retour arrière",
+          "Publication sur Google Play, l'App Store ou l'Amazon Appstore si besoin"
+        ],
+        "out": "Votre app en ligne, utilisée par vos clients"
+      },
+      {
+        "icon": "shield",
+        "t": "Je surveille et je transmets",
+        "d": "Après la mise en ligne, je reste attentif et je vous laisse autonome.",
+        "items": [
+          "Alertes d'erreurs côté app et serveur avec Sentry",
+          "Corrections rapides des problèmes remontés",
+          "Documentation et passation des accès"
+        ],
+        "out": "Une app suivie et une équipe autonome"
+      }
     ]
   },
   "contact": {

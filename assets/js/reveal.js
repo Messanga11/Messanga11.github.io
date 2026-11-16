@@ -16,4 +16,15 @@ export function initReveal(motion) {
     observer.observe(el);
   }
   document.documentElement.classList.add('reveal-ready');
+
+  // Touch screens have no hover: play each simulated app once when it is in view.
+  if (window.matchMedia('(hover: hover)').matches) return;
+  const play = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add('play');
+      play.unobserve(entry.target);
+    }
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.work-card').forEach((card) => play.observe(card));
 }

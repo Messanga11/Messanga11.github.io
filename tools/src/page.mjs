@@ -31,20 +31,20 @@ const screen = (p) => {
   switch (p.kind) {
     case 'tv':
       return `<div class="scr scr-tv"><div class="tv"><p class="tv-row"><span>${e(u.row)}</span><span class="tv-live"><i></i>${e(u.live)}</span></p>
-        <ul class="tv-tiles">${u.tiles.map((x, i) => `<li class="${i === 1 ? 'is-focus' : ''}"><span>${e(x)}</span></li>`).join('')}</ul></div><span class="tv-stand"></span></div>`;
+        <ul class="tv-tiles">${u.tiles.map((x, i) => `<li class="${i === 1 ? 'is-focus' : ''}" style="--n:${i}"><span>${e(x)}</span></li>`).join('')}</ul></div><span class="tv-stand"></span></div>`;
     case 'checkout':
       return `<div class="scr scr-pay"><div class="pay"><p class="pay-title">${e(u.title)}</p>
-        <ul>${u.lines.map((x) => `<li><span>${e(x)}</span>${icon('check', 'pay-ok')}</li>`).join('')}</ul>
+        <ul>${u.lines.map((x, i) => `<li style="--n:${i}"><span>${e(x)}</span>${icon('check', 'pay-ok')}</li>`).join('')}</ul>
         <p class="pay-status"><i></i>${e(u.status)}</p></div></div>`;
     case 'chat':
       return `<div class="scr scr-chat"><div class="phone"><p class="chat-head"><span class="avatar">N</span>${e(u.doctor)}</p>
         <p class="bub bub-in">${e(u.msgIn)}</p><p class="bub bub-out">${e(u.msgOut)}</p><p class="chat-cta">${e(u.action)}</p></div></div>`;
     case 'calendar':
       return `<div class="scr scr-cal"><div class="cal"><p class="cal-title">${e(u.title)}</p>
-        <ol class="cal-days">${u.days.map((d, i) => `<li class="${i === 2 ? 'is-booked' : ''}"><b>${e(d)}</b><span></span><span></span></li>`).join('')}</ol>
+        <ol class="cal-days">${u.days.map((d, i) => `<li class="${i === 2 ? 'is-booked' : ''}" style="--n:${i}"><b>${e(d)}</b><span></span><span></span></li>`).join('')}</ol>
         <p class="cal-paid">${icon('check')}${e(u.booked)}</p></div></div>`;
     case 'order':
-      return `<div class="scr scr-order"><div class="phone"><ol class="order">${u.steps.map((x, i) => `<li class="${i < 2 ? 'is-done' : i === 2 ? 'is-now' : ''}"><i></i><span>${e(x)}</span></li>`).join('')}</ol></div></div>`;
+      return `<div class="scr scr-order"><div class="phone"><ol class="order">${u.steps.map((x, i) => `<li class="${i < 2 ? 'is-done' : i === 2 ? 'is-now' : ''}" style="--n:${i}"><i></i><span>${e(x)}</span></li>`).join('')}</ol></div></div>`;
     case 'scan':
       return `<div class="scr scr-scan"><div class="phone"><p class="scan-title">${e(u.title)}</p>
         <div class="face"><svg viewBox="0 0 120 120" class="face-svg"><path class="f-hair" d="M30 56 C28 30 46 16 62 16 C82 16 94 32 92 56 C88 44 80 38 70 36 C58 42 42 44 30 56 Z"/>
@@ -128,7 +128,7 @@ export const page = (t, alt) => {
     '@graph': [
       {
         '@type': 'Person', '@id': `${SITE}/#paul`, name: 'Paul Messanga', jobTitle: t.meta.jobTitle,
-        url, email: `mailto:${EMAIL}`, telephone: PHONE,
+        url, image: `${SITE}/assets/img/paul-800.webp`, email: `mailto:${EMAIL}`, telephone: PHONE,
         address: { '@type': 'PostalAddress', addressLocality: 'Yaoundé', addressCountry: 'CM' },
         alumniOf: { '@type': 'CollegeOrUniversity', name: 'EGEM' }, knowsLanguage: ['fr', 'en'],
         knowsAbout: ['Node.js', 'TypeScript', 'PostgreSQL', 'Docker', 'GitHub Actions', 'React', 'Next.js', 'React Native', 'Flutter', 'Push notifications', 'End-to-end testing'],
@@ -179,12 +179,9 @@ export const page = (t, alt) => {
             <a class="btn btn-ghost" href="#work">${e(t.hero.secondary)}${icon('arrow-down', 'btn-arrow')}</a>
           </div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          ${(() => { const P = Object.fromEntries(t.work.projects.map((p) => [p.id, p])); return `
-          <div class="hv hv-tv">${screen(P.stackz)}</div>
-          <div class="hv hv-pay">${screen(P.adsquid)}</div>
-          <div class="hv hv-chat">${screen(P.docta)}</div>`; })()}
-        </div>
+        <figure class="hero-photo">
+          <img src="/assets/img/paul-800.webp" srcset="/assets/img/paul-480.webp 480w, /assets/img/paul-800.webp 800w" sizes="(min-width: 60rem) 34rem, 92vw" width="800" height="800" alt="${e(t.hero.photoAlt)}" fetchpriority="high" decoding="async">
+        </figure>
       </div>
       <div class="wrap">
         <dl class="figures">${t.hero.figures.map((f) => `<div><dt>${e(f.n)}</dt><dd>${e(f.t)}</dd></div>`).join('')}</dl>
@@ -228,7 +225,13 @@ export const page = (t, alt) => {
           <p class="eyebrow">${e(t.method.eyebrow)}</p>
           <h2 id="method-title">${e(t.method.title)}</h2>
         </header>
-        <ol class="steps">${t.method.steps.map((st, i) => `<li data-reveal style="--i:${i % 3}"><span class="step-n">${String(i + 1).padStart(2, '0')}</span><h3 class="h5">${e(st.t)}</h3><p>${e(st.d)}</p></li>`).join('')}</ol>
+        <ol class="steps">${t.method.steps.map((st, i) => `<li class="step" data-reveal style="--i:${i % 3}">
+          <div class="step-top"><span class="step-icon">${icon(st.icon)}</span><span class="step-n">${String(i + 1).padStart(2, '0')}</span></div>
+          <h3 class="step-title">${e(st.t)}</h3>
+          <p class="step-d">${e(st.d)}</p>
+          <ul class="step-items">${st.items.map((x) => `<li>${icon('check', 'step-check')}<span>${e(x)}</span></li>`).join('')}</ul>
+          <p class="step-out"><span>${e(t.method.outLabel)}</span>${e(st.out)}</p>
+        </li>`).join('')}</ol>
       </div>
     </section>
 
