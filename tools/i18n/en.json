@@ -50,11 +50,11 @@
     ]
   },
   "meta": {
-    "title": "Paul Messanga — Lead full-stack developer in Yaoundé (web, mobile, TV)",
-    "description": "Lead full-stack developer in Yaoundé, Cameroon. I build your app from scratch or take over your existing code, and make it hold up for real customers: web, mobile, TV, payments, push notifications.",
+    "title": "Paul Messanga — Lead full-stack developer (web, mobile, TV)",
+    "description": "Lead full-stack developer. I build your app from scratch or take over your existing code, and make it hold up for real customers: web, mobile, TV, payments, push notifications.",
     "ogTitle": "Paul Messanga — Your app has to hold up for your customers",
-    "ogDescription": "From scratch or taken over: web, mobile and TV, payments, real time and push notifications. Based in Yaoundé.",
-    "ogAlt": "Paul Messanga, lead full-stack developer in Yaoundé",
+    "ogDescription": "From scratch or taken over: web, mobile and TV, payments, real time and push notifications.",
+    "ogAlt": "Paul Messanga, lead full-stack developer",
     "jobTitle": "Lead full-stack developer"
   },
   "ui": {
@@ -96,7 +96,10 @@
     }
   ],
   "hero": {
-    "status": "Available at short notice, Yaoundé",
+    "meta": {
+      "available": "Available at short notice",
+      "mode": "Freelance, remote"
+    },
     "title": "Your app has to hold up for real customers. I take care of it",
     "lead": "I build your product from scratch or take over what exists, then make it hold: payments that go through, screens that respond, notifications that arrive. Web, mobile and TV, since 2019.",
     "primary": "Let's talk about your project",

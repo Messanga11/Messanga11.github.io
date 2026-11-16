@@ -2,7 +2,7 @@
 // tools/i18n/<lang>.json and is HTML-escaped by `e`.
 import { readFileSync } from 'node:fs';
 import { icon, sprite } from './icons.mjs';
-import { brandIcon, brandSprite } from './brands.mjs';
+import { brandGlyph, brandIcon, brandSprite } from './brands.mjs';
 
 // Inlined so the scene colours follow the page theme tokens (--art-*).
 const HERO_ART = readFileSync(new URL('../art/hero.svg', import.meta.url), 'utf8').trim();
@@ -133,7 +133,6 @@ export const page = (t, alt) => {
       {
         '@type': 'Person', '@id': `${SITE}/#paul`, name: 'Paul Messanga', jobTitle: t.meta.jobTitle,
         url, image: `${SITE}/assets/img/paul.webp`, email: `mailto:${EMAIL}`, telephone: PHONE,
-        address: { '@type': 'PostalAddress', addressLocality: 'Yaoundé', addressCountry: 'CM' },
         alumniOf: { '@type': 'CollegeOrUniversity', name: 'EGEM' }, knowsLanguage: ['fr', 'en'],
         knowsAbout: ['Node.js', 'TypeScript', 'PostgreSQL', 'Docker', 'GitHub Actions', 'React', 'Next.js', 'React Native', 'Flutter', 'Push notifications', 'End-to-end testing'],
         sameAs: ['https://github.com/Messanga11', 'https://www.linkedin.com/in/paul-messanga-954a711b3']
@@ -175,7 +174,10 @@ export const page = (t, alt) => {
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="status"><span class="status-dot" aria-hidden="true"></span>${e(t.hero.status)}</p>
+          <p class="hero-meta">
+            <span class="hero-meta-item hero-meta-lead">${e(t.hero.meta.available)}</span>
+            <span class="hero-meta-item">${e(t.hero.meta.mode)}</span>
+          </p>
           <h1 id="hero-title">${e(t.hero.title)}</h1>
           <p class="lead">${e(t.hero.lead)}</p>
           <div class="actions">
@@ -267,7 +269,7 @@ export const page = (t, alt) => {
           <p class="lead">${e(t.contact.lead)}</p>
           <div class="actions">
             <a class="btn btn-invert" href="${mail}">${icon('mail')}${e(t.contact.email)}</a>
-            <a class="btn btn-ghost-invert" href="${wa}" rel="noopener" target="_blank">${icon('message')}${e(t.contact.whatsapp)}<span class="visually-hidden"> (${e(t.ui.external)})</span></a>
+            <a class="btn btn-ghost-invert" href="${wa}" rel="noopener" target="_blank">${brandGlyph('whatsapp')}${e(t.contact.whatsapp)}<span class="visually-hidden"> (${e(t.ui.external)})</span></a>
           </div>
           <ul class="contact-list">
             <li>${icon('mail')}<span>${EMAIL}</span></li>
@@ -291,7 +293,7 @@ export const page = (t, alt) => {
   <div class="cta-bar" data-cta-bar aria-hidden="true">
     <p class="cta-text">${e(t.ui.barText)}</p>
     <a class="btn btn-small" href="#contact" tabindex="-1">${e(t.ui.barTalk)}</a>
-    <a class="icon-btn icon-btn-accent" href="${wa}" rel="noopener" target="_blank" aria-label="${e(t.ui.barWhatsApp)}" tabindex="-1">${icon('message')}</a>
+    <a class="icon-btn icon-btn-accent" href="${wa}" rel="noopener" target="_blank" aria-label="${e(t.ui.barWhatsApp)}" tabindex="-1">${brandGlyph('whatsapp')}</a>
   </div>
 </body>
 </html>

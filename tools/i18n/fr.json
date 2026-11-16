@@ -50,11 +50,11 @@
     ]
   },
   "meta": {
-    "title": "Paul Messanga — Lead développeur full-stack à Yaoundé (web, mobile, TV)",
-    "description": "Lead développeur full-stack à Yaoundé. Je construis votre app de zéro ou je reprends l'existant, et je la fais tenir face à vos vrais clients : web, mobile, TV, paiements, notifications push.",
+    "title": "Paul Messanga — Lead développeur full-stack (web, mobile, TV)",
+    "description": "Lead développeur full-stack. Je construis votre app de zéro ou je reprends l'existant, et je la fais tenir face à vos vrais clients : web, mobile, TV, paiements, notifications push.",
     "ogTitle": "Paul Messanga — Votre app doit tenir face à vos clients",
-    "ogDescription": "De zéro ou à reprendre : web, mobile et TV, paiements, temps réel et notifications push. Basé à Yaoundé.",
-    "ogAlt": "Paul Messanga, lead développeur full-stack à Yaoundé",
+    "ogDescription": "De zéro ou à reprendre : web, mobile et TV, paiements, temps réel et notifications push.",
+    "ogAlt": "Paul Messanga, lead développeur full-stack",
     "jobTitle": "Lead développeur full-stack"
   },
   "ui": {
@@ -96,7 +96,10 @@
     }
   ],
   "hero": {
-    "status": "Disponible rapidement, Yaoundé",
+    "meta": {
+      "available": "Disponible rapidement",
+      "mode": "Freelance, à distance"
+    },
     "title": "Votre app doit tenir face à vos vrais clients. Je m'en charge",
     "lead": "Je construis votre produit de zéro ou je reprends l'existant, puis je le fais tenir : paiements qui passent, écrans qui répondent, notifications qui arrivent. Web, mobile et TV, depuis 2019.",
     "primary": "Parlons de votre projet",
