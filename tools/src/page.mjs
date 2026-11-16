@@ -64,7 +64,7 @@ const screen = (p) => {
 };
 
 const project = (p, t, i) => `
-<li class="work-card work-${p.id}" data-tilt data-reveal style="--i:${i % 3}">
+<li class="work-card work-${p.id}${p.link ? ' has-link' : ''}" data-tilt data-reveal style="--i:${i % 3}">
   <article class="work-inner" aria-labelledby="w-${p.id}">
     <div class="work-screen" aria-hidden="true">${screen(p)}</div>
     <div class="work-body">
@@ -73,7 +73,7 @@ const project = (p, t, i) => `
       <p class="work-result">${e(p.result)}</p>
       <div class="work-foot">
         <ul class="tags" aria-label="Stack">${p.tags.map((x) => `<li>${brandIcon(x)}${e(x)}</li>`).join('')}</ul>
-        ${p.link ? ext(p.link.href, p.link.label, t) : ''}
+        ${p.link ? ext(p.link.href, p.link.label, t, 'link work-link') : ''}
       </div>
     </div>
   </article>
@@ -223,7 +223,7 @@ export const page = (t, alt) => {
         </header>
         <ul class="work">${t.work.projects.map((p, i) => project(p, t, i)).join('')}</ul>
         <h3 class="more-title" data-reveal>${e(t.more.title)}</h3>
-        <ul class="more">${t.more.items.map((m) => `<li data-reveal><span class="more-name">${e(m.name)}</span><span class="more-text">${e(m.text)}</span><span class="more-link">${m.href ? ext(m.href, m.label, t) : ''}</span></li>`).join('')}</ul>
+        <ul class="more">${t.more.items.map((m) => `<li data-reveal${m.href ? ' class="has-link"' : ''}><span class="more-name">${e(m.name)}</span><span class="more-text">${e(m.text)}</span><span class="more-link">${m.href ? ext(m.href, m.label, t, 'link row-link') : ''}</span></li>`).join('')}</ul>
         <p class="section-cta" data-reveal><a class="btn" href="#contact">${e(t.work.cta)}${icon('arrow-right', 'btn-arrow')}</a></p>
       </div>
     </section>

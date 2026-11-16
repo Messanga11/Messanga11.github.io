@@ -342,6 +342,13 @@ a { color: inherit; }
 }
 .work-card:hover .work-inner, .work-card:focus-within .work-inner { --lift: -4px; border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); box-shadow: var(--shadow-lift); }
 .work-card.is-tilting .work-inner { transition-duration: 80ms; }
+/* Whole card clickable: the project link stretches over the card (one link, one tab stop) */
+.work-inner { position: relative; }
+.has-link .work-inner { cursor: pointer; }
+.work-link::after { content: ""; position: absolute; inset: 0; z-index: 2; border-radius: var(--r-card); }
+.work-link:focus-visible { outline: none; }
+.work-card:has(.work-link:focus-visible) .work-inner { outline: 3px solid var(--accent); outline-offset: 3px; }
+.has-link:hover .work-link { color: var(--accent-strong); }
 .work-screen { position: relative; aspect-ratio: 16 / 10; border-radius: var(--r-sm); background: var(--bg-2); overflow: hidden; }
 .work-body { display: flex; flex-direction: column; gap: var(--s-2); padding: var(--s-4) var(--s-3) var(--s-3); flex: 1; }
 .work-meta { font: 400 var(--fs-xs)/1.4 var(--font-mono); color: var(--ink-3); }
@@ -460,6 +467,11 @@ a { color: inherit; }
 @media (min-width: 52rem) { .more li { grid-template-columns: 12rem 1fr auto; } }
 .more-name { font-weight: 600; }
 .more-text { color: var(--ink-2); font-size: var(--fs-sm); }
+.more li.has-link { position: relative; cursor: pointer; }
+.row-link::after { content: ""; position: absolute; inset: 0; }
+.row-link:focus-visible { outline: none; }
+.more li:has(.row-link:focus-visible) { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.more li.has-link:hover .row-link { color: var(--accent-strong); }
 
 /* Generic sections -------------------------------------------------------- */
 .section { padding-block: var(--section-y); border-top: 1px solid var(--line); }
