@@ -97,8 +97,7 @@
   ],
   "hero": {
     "meta": {
-      "available": "Available at short notice",
-      "mode": "Freelance, remote"
+      "available": "Available at short notice"
     },
     "title": "Your app has to hold up for real customers. I take care of it",
     "lead": "I build your product from scratch or take over what exists, then make it hold: payments that go through, screens that respond, notifications that arrive. Web, mobile and TV, since 2019.",
@@ -211,7 +210,10 @@
           "Stripe",
           "PayPal"
         ],
-        "link": null,
+        "link": {
+          "href": "https://adsquid.fr/",
+          "label": "adsquid.fr"
+        },
         "ui": {
           "title": "Order",
           "lines": [

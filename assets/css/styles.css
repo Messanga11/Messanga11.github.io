@@ -263,6 +263,35 @@ a { color: inherit; }
 .notif-text { display: grid; gap: 2px; }
 .notif-meta { font-size: 12px; color: var(--notif-meta); }
 .motion-ok .notif { animation: notif-in .6s cubic-bezier(.2,.7,.2,1) .8s both; }
+
+/* Hero illustration life. One 6s cycle: the phone buzzes, the signal ripples,
+   the card drops in (first run synced with .notif); the rest breathes gently. */
+.hero-art :is(.ha-a-plant, .ha-a-head, .ha-a-body, .ha-a-arm-l, .ha-a-arm-r, .ha-a-phone, .ha-a-steam) { transform-box: fill-box; }
+.motion-ok .ha-a-body { transform-origin: 50% 100%; animation: ha-breathe 5s ease-in-out infinite; }
+.motion-ok .ha-a-head { transform-origin: 50% 100%; animation: ha-nod 4s ease-in-out infinite; }
+.motion-ok .ha-a-arm-l { animation: ha-type .32s ease-in-out infinite alternate; }
+.motion-ok .ha-a-arm-r { animation: ha-type .32s ease-in-out .16s infinite alternate; }
+.motion-ok .ha-a-plant { transform-origin: 50% 100%; animation: ha-sway 6s ease-in-out infinite; }
+.motion-ok .ha-a-glow { animation: ha-glow 4s ease-in-out infinite; }
+.motion-ok .ha-a-steam { animation: ha-steam 3s ease-out infinite; }
+.motion-ok .ha-a-steam-2 { animation-delay: 1.5s; }
+.motion-ok .ha-a-phone { transform-origin: 50% 50%; animation: ha-buzz 6s linear .3s infinite; }
+.motion-ok .ha-a-screen { animation: ha-screen 6s ease-out .3s infinite; }
+.motion-ok .ha-a-ping { opacity: 0; animation: ha-ping 6s ease-out .4s infinite; }
+.motion-ok .ha-a-ping-2 { animation-delay: .55s; }
+@keyframes ha-breathe { 50% { transform: scaleY(1.008); } }
+@keyframes ha-nod { 0%, 100% { transform: rotate(0); } 30% { transform: rotate(-1.6deg) translateY(1px); } 60% { transform: rotate(1deg); } }
+@keyframes ha-type { to { transform: translateY(-1.5px); } }
+@keyframes ha-sway { 0%, 100% { transform: rotate(-2deg); } 50% { transform: rotate(2.5deg); } }
+@keyframes ha-glow { 0%, 100% { opacity: .75; } 50% { opacity: 1; } }
+@keyframes ha-steam { 0% { transform: translateY(4px); opacity: 0; } 30% { opacity: .45; } 100% { transform: translateY(-10px); opacity: 0; } }
+@keyframes ha-buzz {
+  0%, 9%, 100% { transform: none; }
+  1%, 5% { transform: translateX(-1.5px) rotate(-2deg); }
+  3%, 7% { transform: translateX(1.5px) rotate(2deg); }
+}
+@keyframes ha-screen { 0% { opacity: .55; } 4%, 40% { opacity: 1; } 70%, 100% { opacity: .55; } }
+@keyframes ha-ping { 0% { opacity: 0; } 4% { opacity: 1; } 22%, 100% { opacity: 0; } }
 @keyframes notif-in { from { opacity: 0; transform: translateY(-16px); } }
 
 .figures { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-5) var(--s-4); margin: var(--s-7) 0 0; padding-top: var(--s-5); border-top: 1px solid var(--line); }

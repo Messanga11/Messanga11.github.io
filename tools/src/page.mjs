@@ -176,7 +176,6 @@ export const page = (t, alt) => {
         <div class="hero-copy">
           <p class="hero-meta">
             <span class="hero-meta-item hero-meta-lead">${e(t.hero.meta.available)}</span>
-            <span class="hero-meta-item">${e(t.hero.meta.mode)}</span>
           </p>
           <h1 id="hero-title">${e(t.hero.title)}</h1>
           <p class="lead">${e(t.hero.lead)}</p>
