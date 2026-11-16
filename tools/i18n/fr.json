@@ -3,10 +3,10 @@
   "ogLocale": "fr_FR",
   "path": "/",
   "meta": {
-    "title": "Paul Messanga — Lead développeur full-stack à Yaoundé (Node.js, PostgreSQL, React Native)",
-    "description": "Lead développeur full-stack à Yaoundé. Je construis votre produit de zéro ou je reprends l'existant, je sécurise les parcours critiques et je mets en production : web, mobile, TV, notifications push.",
-    "ogTitle": "Paul Messanga — Votre logiciel doit tenir en production",
-    "ogDescription": "De l'idée à la production, ou du code hérité à un produit fiable. Node.js, PostgreSQL, Docker, React Native, notifications push.",
+    "title": "Paul Messanga — Lead développeur full-stack à Yaoundé (web, mobile, TV)",
+    "description": "Lead développeur full-stack à Yaoundé. Je construis votre app de zéro ou je reprends l'existant, et je la fais tenir face à vos vrais clients : web, mobile, TV, paiements, notifications push.",
+    "ogTitle": "Paul Messanga — Votre app doit tenir face à vos clients",
+    "ogDescription": "De zéro ou à reprendre : web, mobile et TV, paiements, temps réel et notifications push. Basé à Yaoundé.",
     "ogAlt": "Paul Messanga, lead développeur full-stack à Yaoundé",
     "jobTitle": "Lead développeur full-stack"
   },
@@ -21,179 +21,118 @@
     "themeLight": "Thème : clair. Passer au sombre",
     "themeDark": "Thème : sombre. Suivre le système",
     "themeSystem": "Thème : système. Passer au clair",
-    "contactCta": "Discutons",
-    "next": "Étape suivante",
-    "barNext": "Suivant :",
-    "barTalk": "Discutons",
+    "contactCta": "Parlons de votre projet",
+    "barText": "Un projet en tête ?",
+    "barTalk": "Parlons-en",
     "barWhatsApp": "Écrire sur WhatsApp",
-    "proof": "La preuve",
-    "fix": "Ce que je fais",
     "cvLabel": "Télécharger mon CV",
     "cvMeta": "PDF",
     "external": "s'ouvre dans un nouvel onglet",
-    "footer": "Fait à la main : HTML, CSS et un peu de JavaScript, sans framework."
+    "footer": "Fait à la main, sans framework."
   },
   "nav": [
-    { "href": "#scratch", "label": "Vos problèmes" },
-    { "href": "#more", "label": "Projets" },
+    { "href": "#services", "label": "Ce que je règle" },
+    { "href": "#work", "label": "Réalisations" },
     { "href": "#method", "label": "Méthode" },
     { "href": "#path", "label": "Parcours" }
   ],
   "hero": {
-    "status": "Disponible rapidement, Yaoundé, Cameroun",
-    "title": "Votre logiciel doit tenir en production. Je m'en assure",
-    "lead": "Lead développeur full-stack depuis 2019. Je construis votre produit de zéro ou je reprends l'existant, je sécurise ce qui compte pour vos clients, et je le mets en production. Web, mobile, TV.",
-    "primary": "Dites-moi ce qui coince",
-    "secondary": "Lequel de ces problèmes vous parle ?",
+    "status": "Disponible rapidement, Yaoundé",
+    "title": "Votre app doit tenir face à vos vrais clients. Je m'en charge",
+    "lead": "Je construis votre produit de zéro ou je reprends l'existant, puis je le fais tenir : paiements qui passent, écrans qui répondent, notifications qui arrivent. Web, mobile et TV, depuis 2019.",
+    "primary": "Parlons de votre projet",
+    "secondary": "Voir mes réalisations",
     "mascot": "Web, mobile, TV : je m'adapte",
-    "chipsLabel": "Choisissez votre situation",
-    "chips": [
-      { "href": "#scratch", "label": "Rien n'est encore construit" },
-      { "href": "#broken", "label": "Ça casse en production" },
-      { "href": "#legacy", "label": "Code hérité illisible" },
-      { "href": "#slow", "label": "Les utilisateurs partent" },
-      { "href": "#push", "label": "Les notifications n'arrivent pas" }
-    ],
     "figures": [
-      { "n": "344", "t": "tests de bout en bout sur les parcours critiques d'Adsquid" },
-      { "n": "10", "t": "mises en production pilotées en blue-green" },
+      { "n": "344", "t": "tests automatiques sur le paiement et l'inscription d'Adsquid" },
       { "n": "5 000+", "t": "téléchargements de Cooltchop sur Google Play" },
-      { "n": "3 stores", "t": "Google Play, App Store et Amazon Appstore" }
+      { "n": "3 stores", "t": "Google Play, App Store et Amazon Appstore" },
+      { "n": "10", "t": "mises en production pilotées, retour arrière toujours prêt" }
     ]
   },
-  "problems": [
-    {
-      "id": "scratch",
-      "icon": "rocket",
-      "short": "Partir de zéro",
-      "eyebrow": "Problème 1 sur 5",
-      "title": "Vous avez une idée, mais rien n'est encore construit",
-      "agitate": "Chaque mois sans produit est un mois offert à vos concurrents. Et un mauvais choix technique au départ se paie longtemps : une app à réécrire, des paiements qui ne passent pas, une équipe bloquée par sa propre architecture.",
-      "fixes": [
-        "Je pars de votre besoin réel et je découpe une première version utile",
-        "Je conçois l'architecture : API, base de données, apps web et mobiles",
-        "J'intègre ce qui fait vivre le produit : paiements, notifications, temps réel",
-        "Je publie sur les stores et je mets en production, avec les tests"
-      ],
-      "proofs": [
-        { "name": "Utando", "meta": "Mission freelance · en production", "text": "Plateforme logistique conçue de zéro : API Node.js / Fastify sur PostgreSQL, 3 apps Expo et un back-office React, paiements MTN MoMo et Orange Money, grand livre des reversements, tâches de fond et géolocalisation.", "links": [{ "href": "https://partner.randyetlynn.com", "label": "partner.randyetlynn.com" }, { "href": "https://admin.randyetlynn.com", "label": "admin.randyetlynn.com" }] },
-        { "name": "Cooltchop", "meta": "Kevmax · sur les stores", "text": "Livraison de repas développée de bout en bout : l'API en PHP / Slim, l'app React Native et la version web. Plus de 5 000 téléchargements sur Google Play.", "links": [{ "href": "https://cooltchop.com/", "label": "cooltchop.com" }] },
-        { "name": "Snow Volican", "meta": "Mission freelance · 2025", "text": "Plateforme d'événements développée seul : API FastAPI sur PostgreSQL, front React, paiements Stripe, Sentry côté front et back.", "links": [] }
-      ],
-      "next": { "href": "#broken", "label": "Votre produit existe déjà, mais il casse ?" }
-    },
-    {
-      "id": "broken",
-      "icon": "bug",
-      "short": "Ça casse en production",
-      "eyebrow": "Problème 2 sur 5",
-      "title": "Votre app casse en production",
-      "agitate": "Chaque mise en production devient un pari. Le paiement échoue un vendredi soir, vos clients le voient avant vous, et l'équipe passe la semaine à éteindre des incendies au lieu d'avancer.",
-      "fixes": [
-        "Des tests de bout en bout sur les parcours qui rapportent : inscription, panier, paiement",
-        "Des images Docker construites par GitHub Actions, identiques en test et en production",
-        "Un déploiement vérifié avant la bascule, avec retour arrière immédiat",
-        "Sentry côté frontend et backend pour voir l'erreur avant le client"
-      ],
-      "proofs": [
-        { "name": "Adsquid", "meta": "Mission freelance · en production", "text": "344 tests Playwright sur l'inscription, le panier et le paiement Stripe / PayPal. 10 mises en production avec un déploiement blue-green et un retour arrière immédiat.", "links": [{ "href": "https://adsquid.fr/", "label": "adsquid.fr" }] },
-        { "name": "Snow Volican", "meta": "Mission freelance · 2025", "text": "Déploiement sans interruption : plusieurs instances derrière Nginx, vérifications de santé, mise à jour une instance à la fois, lancé par GitHub Actions.", "links": [] },
-        { "name": "CRM immobilier", "meta": "WebPackSolution · en production", "text": "290 fichiers de tests sur la connexion, la double authentification, les rôles et la vérification d'identité des clients.", "links": [{ "href": "https://www.exclusivealgarvevillas.com/fr", "label": "exclusivealgarvevillas.com" }] }
-      ],
-      "next": { "href": "#legacy", "label": "Le code est là, mais personne ne le comprend ?" }
-    },
-    {
-      "id": "legacy",
-      "icon": "search",
-      "short": "Code hérité",
-      "eyebrow": "Problème 3 sur 5",
-      "title": "Vous avez hérité d'un code que personne ne comprend",
-      "agitate": "Chaque modification en casse une autre. Le développeur d'origine est parti, la migration annoncée n'a jamais vraiment été faite, et votre roadmap avance au rythme des régressions.",
-      "fixes": [
-        "J'audite l'existant : ce qui marche, ce qui casse, ce qui manque",
-        "Je transforme l'audit en plan de migration par petits lots vérifiables",
-        "Je pose les tests comme filet de sécurité avant de toucher au cœur",
-        "Chaque bug corrigé devient une règle automatique pour qu'il ne revienne pas"
-      ],
-      "proofs": [
-        { "name": "Adsquid", "meta": "Reprise d'une plateforme existante", "text": "Audit de 10 modules, 563 colonnes et 262 règles métier : seules 9 colonnes étaient réellement migrées. L'audit est devenu le plan de migration vers Payload CMS et Next.js sur PostgreSQL.", "links": [] },
-        { "name": "Epiltech", "meta": "Mission freelance", "text": "Boutique et formations migrées de Prisma vers Payload sur PostgreSQL, avec toute l'infrastructure auto-hébergée sous Docker Compose et des sauvegardes quotidiennes.", "links": [] }
-      ],
-      "next": { "href": "#slow", "label": "Ça marche, mais c'est lent ?" }
-    },
-    {
-      "id": "slow",
-      "icon": "gauge",
-      "short": "Utilisateurs qui partent",
-      "eyebrow": "Problème 4 sur 5",
-      "title": "Vos utilisateurs attendent, puis partent",
-      "agitate": "Trois secondes de trop, une coupure de réseau, un écran qui saccade : l'utilisateur ne se plaint pas, il désinstalle. Et vous ne le saurez jamais.",
-      "fixes": [
-        "Je mesure avant et après chaque correction, pour prouver le gain",
-        "Je réduis ce que l'app redessine et ce qu'elle télécharge",
-        "Je conçois pour les réseaux instables et les petits téléphones",
-        "Je mets en place le temps réel proprement : WebRTC, sockets, STOMP"
-      ],
-      "proofs": [
-        { "name": "StackZ et One2All TV", "meta": "Seul développeur des apps TV et mobile", "text": "Un déplacement à la télécommande redessine 2 cartes au lieu d'environ 14, mesuré avec Flashlight. Direct WebRTC, temps réel STOMP, Picture-in-Picture, publiées sur 3 stores.", "links": [{ "href": "https://stackz.gg/", "label": "stackz.gg" }] },
-        { "name": "Docta", "meta": "Kevmax · télémédecine", "text": "Application Flutter avec chat en temps réel par sockets et carte des praticiens à proximité.", "links": [{ "href": "https://doctaapp.fr/", "label": "doctaapp.fr" }] }
-      ],
-      "next": { "href": "#push", "label": "Et quand vos messages n'arrivent pas ?" }
-    },
-    {
-      "id": "push",
-      "icon": "bell",
-      "short": "Notifications",
-      "eyebrow": "Problème 5 sur 5",
-      "title": "Vos notifications n'arrivent pas, ou elles agacent",
-      "agitate": "Un chauffeur rate une course, un paiement est confirmé sans que personne ne le sache, ou au contraire l'app envoie trop de messages et vos utilisateurs coupent tout.",
-      "fixes": [
-        "Des notifications push fiables sur Android et iOS",
-        "Des canaux Android et des préférences par type de message",
-        "Des rappels planifiés avec une limite de fréquence",
-        "L'e-mail et le calendrier quand le push n'est pas le bon canal"
-      ],
-      "proofs": [
-        { "name": "Utando", "meta": "Notifications push · OneSignal", "text": "Push sur les apps chauffeur, partenaire, voyageur et le back-office, avec des canaux de notification Android.", "links": [] },
-        { "name": "Karreer", "meta": "Produit personnel", "text": "Notifications push avec rappels planifiés par cron et limite de fréquence, pour ne jamais submerger l'utilisateur.", "links": [] },
-        { "name": "CRM immobilier", "meta": "WebPackSolution", "text": "Visites planifiées avec notifications par e-mail et invitation calendrier, et un premier contact exigé sous 4 h pour chaque prospect.", "links": [] }
-      ],
-      "next": { "href": "#contact", "label": "Vous vous êtes reconnu ? Parlons-en" }
-    }
-  ],
+  "services": {
+    "eyebrow": "Ce que je règle",
+    "title": "Ce qui fait partir vos clients, je le règle",
+    "items": [
+      { "icon": "rocket", "title": "Votre idée n'existe pas encore", "pain": "Chaque mois sans produit profite à vos concurrents, et un mauvais choix technique au départ se paie pendant des années.", "promise": "Une première version utile, une architecture qui tient, et la publication sur les stores." },
+      { "icon": "bug", "title": "Votre app casse en production", "pain": "Le paiement échoue un vendredi soir et vos clients le voient avant vous.", "promise": "Tests automatiques sur les parcours qui rapportent, mises en production vérifiées, retour arrière immédiat." },
+      { "icon": "search", "title": "Personne ne comprend plus le code", "pain": "Chaque correction en casse une autre, et la migration annoncée n'a jamais été faite.", "promise": "Un audit clair, un plan de migration par petites étapes, et des tests comme filet de sécurité." },
+      { "icon": "gauge", "title": "Vos utilisateurs attendent, puis partent", "pain": "Trois secondes de trop ou un réseau qui coupe : ils désinstallent sans prévenir.", "promise": "Des écrans qui répondent, même sur un petit téléphone et un réseau instable." },
+      { "icon": "bell", "title": "Vos notifications n'arrivent pas", "pain": "Une course manquée, un paiement confirmé sans que personne ne le sache, ou trop de messages et l'app est coupée.", "promise": "Des notifications push fiables, rangées par canal, avec des rappels qui ne lassent pas." }
+    ],
+    "cta": "Voir ce que j'ai livré"
+  },
+  "work": {
+    "eyebrow": "Réalisations",
+    "title": "Des produits livrés, utilisés tous les jours",
+    "projects": [
+      {
+        "id": "stackz", "kind": "tv", "meta": "One2All.TV · seul développeur TV et mobile", "name": "StackZ",
+        "result": "Une app de direct fluide à la télécommande : chaque déplacement redessine 2 cartes au lieu d'environ 14. Publiée sur Google Play, l'App Store et l'Amazon Appstore.",
+        "tags": ["React Native", "Android TV", "WebRTC"],
+        "link": { "href": "https://stackz.gg/", "label": "stackz.gg" },
+        "ui": { "row": "À la une", "live": "En direct", "tiles": ["Lifestyle", "Films", "Sport", "Téléréalité", "Jeux"] }
+      },
+      {
+        "id": "adsquid", "kind": "checkout", "meta": "Mission freelance · reprise de code existant", "name": "Adsquid",
+        "result": "Une plateforme reprise, auditée puis sécurisée : 344 tests automatiques sur l'inscription, le panier et le paiement, et 10 mises en production avec retour arrière prêt.",
+        "tags": ["Next.js", "PostgreSQL", "Stripe", "PayPal"],
+        "link": { "href": "https://adsquid.fr/", "label": "adsquid.fr" },
+        "ui": { "title": "Commande", "lines": ["Inscription", "Panier", "Paiement"], "status": "344 tests passés" }
+      },
+      {
+        "id": "docta", "kind": "chat", "meta": "Kevmax · télémédecine", "name": "Docta",
+        "result": "Rendez-vous, téléconsultation et second avis médical au Cameroun, avec paiement MTN MoMo et Orange Money et un chat en temps réel avec le médecin.",
+        "tags": ["Flutter", "Temps réel", "Mobile Money"],
+        "link": { "href": "https://doctaapp.fr/", "label": "doctaapp.fr" },
+        "ui": { "doctor": "Dr. Ngo", "msgIn": "Bonjour, comment vous sentez-vous ?", "msgOut": "Mieux depuis hier", "action": "Rejoindre la consultation" }
+      },
+      {
+        "id": "epiltech", "kind": "calendar", "meta": "Mission freelance · boutique et formations", "name": "Epiltech",
+        "result": "Une boutique migrée sans tout réécrire, des formations réservées avec acompte, et une infrastructure auto-hébergée sauvegardée chaque jour.",
+        "tags": ["Payload", "PostgreSQL", "Docker"],
+        "link": null,
+        "ui": { "title": "Formation", "days": ["L", "M", "M", "J", "V"], "booked": "Acompte payé" }
+      },
+      {
+        "id": "cooltchop", "kind": "order", "meta": "Kevmax · de bout en bout", "name": "Cooltchop",
+        "result": "La commande de repas au Cameroun, pensée pour les réseaux qui coupent : API, app mobile et site web. Plus de 5 000 téléchargements.",
+        "tags": ["React Native", "PHP / Slim", "Web"],
+        "link": { "href": "https://cooltchop.com/", "label": "cooltchop.com" },
+        "ui": { "steps": ["Commandée", "En préparation", "En route", "Livrée"] }
+      },
+      {
+        "id": "dermora", "kind": "scan", "meta": "Produit personnel · mobile et IA", "name": "Dermora",
+        "result": "L'analyse de peau guidée par l'IA, de la capture du visage au conseil personnalisé, dans une app mobile simple à suivre.",
+        "tags": ["React Native", "ML Kit", "Fastify"],
+        "link": null,
+        "ui": { "title": "Analyse", "steps": ["Questionnaire", "Capture", "Résultat"] }
+      }
+    ],
+    "cta": "Parlons de votre projet"
+  },
   "more": {
-    "eyebrow": "Autres projets",
-    "title": "D'autres produits, la même exigence",
-    "cards": [
-      { "name": "Carla+", "meta": "Next.js · FastAPI", "text": "Diagnostic capillaire par IA transformé en parcours simple, de la question au produit recommandé.", "href": "https://carlaplus.com/fr/", "label": "carlaplus.com" },
-      { "name": "ChezBio", "meta": "Web et mobile", "text": "E-commerce de produits bio et de machines fabriquées localement.", "href": "https://www.chezbio.com/", "label": "chezbio.com" },
-      { "name": "OuiSpeak", "meta": "Web", "text": "Interprétation à distance pour les réunions et événements multilingues.", "href": "https://ouispeak.io/fr/", "label": "ouispeak.io" }
-    ],
-    "ossTitle": "Open source et produits personnels",
-    "oss": [
-      { "name": "Messanga11/core", "href": "https://github.com/Messanga11/core", "text": "Socle TypeScript multi-clients sur PostgreSQL, CI sur de vrais PostgreSQL et Redis" },
-      { "name": "create-messanga11-app", "href": "https://github.com/Messanga11/create-messanga11-app", "text": "Génère un monorepo Next.js et Expo prêt à l'emploi" },
-      { "name": "formbuilder", "href": "https://github.com/Messanga11/formbuilder", "text": "Formulaires React headless et extensibles" },
-      { "name": "table-page", "href": "https://github.com/Messanga11/table-page", "text": "Pages de tableau CRUD headless" },
-      { "name": "Filjuste", "href": "", "text": "Studio vidéo par IA avec plafond de dépense, et site de vente de terrains" },
-      { "name": "Ralph", "href": "", "text": "Mon système autonome de construction d'apps : il rédige les spécifications et leurs tests, puis construit. Karreer a été construit avec lui" },
-      { "name": "Yegle", "href": "", "text": "En conception : répétiteur IA hors connexion pour les enfants" },
-      { "name": "Figcody", "href": "", "text": "Plugin Figma qui génère un projet React et Tailwind grâce à Claude" }
-    ],
-    "next": { "href": "#method", "label": "Comment je travaille" }
+    "title": "Aussi livrés",
+    "items": [
+      { "name": "Utando", "text": "Plateforme logistique en production : 3 apps mobiles, notifications push, paiements Mobile Money", "href": "https://partner.randyetlynn.com", "label": "partner.randyetlynn.com" },
+      { "name": "CRM immobilier", "text": "Un premier contact sous 4 h pour chaque prospect, agent IA sur WhatsApp", "href": "https://www.exclusivealgarvevillas.com/fr", "label": "exclusivealgarvevillas.com" },
+      { "name": "Snow Volican", "text": "Plateforme d'événements conçue pour des mises en production sans coupure", "href": "", "label": "" },
+      { "name": "Carla+", "text": "Diagnostic capillaire par IA, de la question au produit", "href": "https://carlaplus.com/fr/", "label": "carlaplus.com" },
+      { "name": "ChezBio", "text": "E-commerce de produits bio, web et mobile", "href": "https://www.chezbio.com/", "label": "chezbio.com" },
+      { "name": "Open source", "text": "Socle multi-clients sur PostgreSQL, formulaires et tableaux React", "href": "https://github.com/Messanga11/core", "label": "github.com/Messanga11" }
+    ]
   },
   "method": {
     "eyebrow": "Méthode",
-    "title": "Une méthode prévisible pour des projets qui ne le sont pas",
+    "title": "Pas de surprise, du premier appel à la mise en ligne",
     "steps": [
-      { "t": "Comprendre", "d": "Le besoin réel, les utilisateurs, et ce que « réussi » veut dire" },
-      { "t": "Auditer ou concevoir", "d": "L'existant s'il y en a un, sinon l'architecture la plus simple qui tient" },
-      { "t": "Découper", "d": "Des parcours concrets et des étapes vérifiables" },
-      { "t": "Construire et tester", "d": "De petits morceaux testés, chaque bug devient un test" },
-      { "t": "Mettre en production", "d": "Docker, vérification avant bascule, retour arrière prêt" },
-      { "t": "Surveiller et transmettre", "d": "Sentry, documentation, passation claire" }
-    ],
-    "next": { "href": "#path", "label": "Mon parcours" }
+      { "t": "On parle de vos clients", "d": "Ce qu'ils doivent pouvoir faire, et ce que « réussi » veut dire pour vous" },
+      { "t": "Je regarde l'existant", "d": "Ou je dessine l'architecture la plus simple qui tiendra" },
+      { "t": "On avance par étapes", "d": "Des livraisons courtes que vous pouvez tester" },
+      { "t": "Je teste ce qui compte", "d": "Inscription, paiement, notifications : chaque bug corrigé devient un test" },
+      { "t": "Je mets en ligne sans risque", "d": "Vérification avant bascule, retour arrière prêt" },
+      { "t": "Je surveille et je transmets", "d": "Alertes d'erreurs, documentation, passation claire" }
+    ]
   },
   "path": {
     "eyebrow": "Parcours",
@@ -203,7 +142,7 @@
       { "y": "2025 – 2026", "t": "Développeur full-stack, missions freelance", "d": "Adsquid, Utando, Epiltech, Snow Volican" },
       { "y": "2026", "t": "Développeur full-stack, WebPackSolution", "d": "CRM immobilier, pipeline de ventes, agent IA" },
       { "y": "2025 – 2026", "t": "Développeur mobile, One2All.TV", "d": "StackZ et One2All TV, sur TV et mobile" },
-      { "y": "2021 – 2026", "t": "Team Lead Frontend, Kevmax", "d": "Encadrement frontend, Docta, Cooltchop" },
+      { "y": "2021 – 2026", "t": "Team Lead Frontend, Kevmax", "d": "Docta, Cooltchop, encadrement de l'équipe frontend" },
       { "y": "2019 – 2021", "t": "Premières expériences", "d": "DRMIDT-CE (stage) et Lynsey.be" }
     ],
     "eduTitle": "Formation",
@@ -211,24 +150,22 @@
       { "t": "Certifications cloud", "d": "Parcours KodeKloud en cours" },
       { "t": "EGEM", "d": "Diplôme d'ingénieur, 2016 – 2021" },
       { "t": "freeCodeCamp", "d": "300 h, 2021" }
-    ],
-    "next": { "href": "#contact", "label": "Passons à votre projet" }
+    ]
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Dites-moi ce qui vous bloque",
-    "lead": "Une idée à construire, une app qui casse, un code à reprendre : décrivez-moi la situation en quelques lignes. Je reviens vers vous rapidement avec une première piste.",
+    "title": "Racontez-moi votre projet",
+    "lead": "Une idée à construire, une app qui casse, un code à reprendre : quelques lignes suffisent. Je reviens vers vous rapidement avec une première piste.",
     "email": "Écrire un e-mail",
     "emailSubject": "Mon projet",
     "whatsapp": "WhatsApp",
     "whatsappText": "Bonjour Paul, j'ai un projet à vous présenter :",
-    "phone": "Appeler",
     "cv": "CV en PDF",
-    "mascot": "À vous de jouer"
+    "mascot": "J'ai hâte de lire votre message"
   },
   "notFound": {
-    "title": "Cette page n'est pas en production",
-    "text": "Le lien est peut-être ancien. Le reste du site, lui, fonctionne.",
+    "title": "Cette page n'existe pas",
+    "text": "Le lien est peut-être ancien. Le reste du site vous attend.",
     "back": "Retour à l'accueil"
   }
 }

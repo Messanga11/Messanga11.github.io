@@ -1,5 +1,5 @@
-// Light 3D: cards tilt toward the pointer (fine pointers only, max 6 degrees).
-const MAX = 6;
+// Light 3D: cards tilt toward the pointer (fine pointers only, max 4 degrees).
+const MAX = 4;
 
 export function initTilt(motion) {
   if (!motion || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;

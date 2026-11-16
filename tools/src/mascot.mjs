@@ -1,28 +1,29 @@
-// Chameleon mascot, inline SVG. Colours come from CSS custom properties,
-// so it changes with the theme. Parts with classes are animated by mascot.js.
-
-
+// Chameleon mascot, inline SVG with "cute" proportions: big round head,
+// big eye with two glints, rosy cheek, round body, soft spots, tiny round feet.
+// Colours come from CSS custom properties, so it changes with the theme.
+// Classed parts are animated by mascot.js and the CSS (blink, eye tracking).
 const body = () => `
-  <path class="ch-branch" d="M6 132 C60 122 120 124 214 134" />
-  <path class="ch-leaf" d="M178 128 C186 112 204 110 210 118 C204 128 192 132 178 128 Z" />
-  <path class="ch-tail" d="M66 96 C40 102 22 90 24 72 C26 56 44 50 54 60 C62 68 56 80 46 78 C40 77 39 69 45 67" />
-  <path class="ch-leg" d="M82 104 L74 128" />
-  <path class="ch-leg" d="M150 100 L160 128" />
-  <path class="ch-body" d="M60 96 C58 66 88 50 124 52 C150 54 166 66 168 86 C156 102 126 110 96 108 C74 107 61 104 60 96 Z" />
-  <path class="ch-belly" d="M74 101 C100 107 132 105 160 92" />
-  <path class="ch-stripe" d="M92 62 C96 72 96 84 92 96" />
-  <path class="ch-stripe" d="M112 56 C117 68 117 84 112 100" />
-  <path class="ch-stripe" d="M132 58 C137 70 137 84 132 98" />
-  <path class="ch-head" d="M146 60 C158 44 186 44 198 62 C204 72 198 88 180 90 C166 92 152 84 146 74 Z" />
-  <path class="ch-crest" d="M150 58 C154 40 168 34 180 44" />
-  <path class="ch-mouth" d="M182 82 C188 84 194 82 198 76" />
-  <circle class="ch-turret" cx="176" cy="66" r="12" />
-  <circle class="ch-eye" cx="176" cy="66" r="7.5" />
-  <g class="ch-pupil"><circle cx="176" cy="66" r="3.4" /><circle class="ch-glint" cx="177.4" cy="64.6" r="1" /></g>
-  <path class="ch-lid" d="M164 66 A12 12 0 0 1 188 66 Z" />
+  <path class="ch-branch" d="M8 134 C70 126 140 127 214 134" />
+  <path class="ch-leaf" d="M30 131 C26 117 38 108 50 111 C50 123 42 131 30 131 Z" />
+  <path class="ch-leaf ch-leaf-2" d="M188 132 C194 119 208 117 213 124 C207 132 198 135 188 132 Z" />
+  <path class="ch-tail" d="M76 104 C50 110 34 98 37 82 C40 68 57 65 63 75 C67 83 60 90 53 87" />
+  <path class="ch-leg" d="M94 112 L91 127" /><circle class="ch-foot" cx="91" cy="128" r="5" />
+  <path class="ch-leg" d="M136 112 L140 127" /><circle class="ch-foot" cx="140" cy="128" r="5" />
+  <path class="ch-body" d="M70 101 C64 74 88 60 118 61 C142 62 157 74 157 92 C152 108 128 116 102 114 C84 113 72 109 70 101 Z" />
+  <path class="ch-belly" d="M84 110 C104 115 130 112 150 101" />
+  <circle class="ch-spot" cx="96" cy="78" r="6" /><circle class="ch-spot" cx="118" cy="72" r="5" />
+  <circle class="ch-spot" cx="134" cy="84" r="4.5" /><circle class="ch-spot" cx="110" cy="94" r="4" />
+  <path class="ch-crest" d="M146 52 C150 36 168 31 180 40" />
+  <path class="ch-head" d="M142 76 C141 52 158 40 176 41 C197 42 208 59 205 77 C202 96 186 104 168 103 C152 102 143 91 142 76 Z" />
+  <ellipse class="ch-cheek" cx="190" cy="88" rx="7" ry="4.2" />
+  <path class="ch-smile" d="M176 92 C181 97 189 97 194 92" />
+  <circle class="ch-turret" cx="174" cy="68" r="17" />
+  <circle class="ch-eye" cx="174" cy="68" r="12.5" />
+  <g class="ch-pupil"><circle cx="175" cy="69" r="6.6" /><circle class="ch-glint" cx="177.6" cy="66" r="2.4" /><circle class="ch-glint" cx="172.6" cy="72" r="1.1" /></g>
+  <circle class="ch-lid" cx="174" cy="68" r="17" />
 `;
 
-// Full interactive copy for the hero (eyes follow the cursor).
+// Full interactive copy (eyes follow the pointer in the hero).
 export const chameleon = (cls = '') =>
   `<svg class="mascot${cls ? ` ${cls}` : ''}" viewBox="0 0 220 150" aria-hidden="true" focusable="false" data-mascot>${body()}</svg>`;
 

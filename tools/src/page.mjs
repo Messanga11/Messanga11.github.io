@@ -13,12 +13,6 @@ export const e = (s) =>
 const ext = (href, label, t, cls = 'link') =>
   `<a class="${cls}" href="${e(href)}" rel="noopener" target="_blank">${e(label)}${icon('external', 'icon-xs')}<span class="visually-hidden"> (${e(t.ui.external)})</span></a>`;
 
-const next = (n, t, i) =>
-  `<p class="next" data-reveal style="--i:${i}">
-    ${chameleonSmall('next-mascot')}
-    <a class="next-link" href="${e(n.href)}"><span class="next-kicker">${e(t.ui.next)}</span><span class="next-label">${e(n.label)}</span>${icon(n.href === '#contact' ? 'arrow-right' : 'arrow-down', 'next-arrow')}</a>
-  </p>`;
-
 // Inline head script: theme before paint, then the language choice.
 const headScript = (t) => `<script>
 (function(){try{var d=document.documentElement,s=localStorage.getItem('theme');
@@ -31,34 +25,49 @@ else if(!l&&here==='fr'&&location.pathname==='/'){var n=(navigator.languages||[n
 if(to)location.replace((to==='en'?'/en/':'/')+location.hash)}catch(_){}})();
 </script>`;
 
-const problem = (p, t, idx) => `
-<section class="problem" id="${p.id}" aria-labelledby="${p.id}-title" data-step="${idx + 1}" data-step-label="${e(p.short)}">
-  <div class="wrap problem-grid">
-    <header class="problem-head" data-reveal>
-      <p class="eyebrow"><span class="eyebrow-icon">${icon(p.icon)}</span>${e(p.eyebrow)}</p>
-      <h2 id="${p.id}-title">${e(p.title)}</h2>
-      <p class="agitate">${e(p.agitate)}</p>
-    </header>
-    <div class="fix" data-reveal style="--i:1">
-      <h3 class="fix-title">${e(t.ui.fix)}</h3>
-      <ul class="fix-list">${p.fixes.map((f) => `<li>${icon('check', 'fix-check')}<span>${e(f)}</span></li>`).join('')}</ul>
+// Mini product screens, drawn in code (decorative: the facts are in the text).
+const screen = (p) => {
+  const u = p.ui;
+  switch (p.kind) {
+    case 'tv':
+      return `<div class="scr scr-tv"><div class="tv"><p class="tv-row"><span>${e(u.row)}</span><span class="tv-live"><i></i>${e(u.live)}</span></p>
+        <ul class="tv-tiles">${u.tiles.map((x, i) => `<li class="${i === 1 ? 'is-focus' : ''}"><span>${e(x)}</span></li>`).join('')}</ul></div><span class="tv-stand"></span></div>`;
+    case 'checkout':
+      return `<div class="scr scr-pay"><div class="pay"><p class="pay-title">${e(u.title)}</p>
+        <ul>${u.lines.map((x) => `<li><span>${e(x)}</span>${icon('check', 'pay-ok')}</li>`).join('')}</ul>
+        <p class="pay-status"><i></i>${e(u.status)}</p></div></div>`;
+    case 'chat':
+      return `<div class="scr scr-chat"><div class="phone"><p class="chat-head"><span class="avatar">N</span>${e(u.doctor)}</p>
+        <p class="bub bub-in">${e(u.msgIn)}</p><p class="bub bub-out">${e(u.msgOut)}</p><p class="chat-cta">${e(u.action)}</p></div></div>`;
+    case 'calendar':
+      return `<div class="scr scr-cal"><div class="cal"><p class="cal-title">${e(u.title)}</p>
+        <ol class="cal-days">${u.days.map((d, i) => `<li class="${i === 2 ? 'is-booked' : ''}"><b>${e(d)}</b><span></span><span></span></li>`).join('')}</ol>
+        <p class="cal-paid">${icon('check')}${e(u.booked)}</p></div></div>`;
+    case 'order':
+      return `<div class="scr scr-order"><div class="phone"><ol class="order">${u.steps.map((x, i) => `<li class="${i < 2 ? 'is-done' : i === 2 ? 'is-now' : ''}"><i></i><span>${e(x)}</span></li>`).join('')}</ol></div></div>`;
+    case 'scan':
+      return `<div class="scr scr-scan"><div class="phone"><p class="scan-title">${e(u.title)}</p><div class="face"><span class="face-ring"></span></div>
+        <ol class="scan-steps">${u.steps.map((x, i) => `<li class="${i < 2 ? 'is-done' : ''}">${e(x)}</li>`).join('')}</ol></div></div>`;
+    default:
+      return '';
+  }
+};
+
+const project = (p, t, i) => `
+<li class="work-card work-${p.id}" data-tilt data-reveal style="--i:${i % 3}">
+  <article class="work-inner" aria-labelledby="w-${p.id}">
+    <div class="work-screen" aria-hidden="true">${screen(p)}</div>
+    <div class="work-body">
+      <p class="work-meta">${e(p.meta)}</p>
+      <h3 id="w-${p.id}">${e(p.name)}</h3>
+      <p class="work-result">${e(p.result)}</p>
+      <div class="work-foot">
+        <ul class="tags" aria-label="Stack">${p.tags.map((x) => `<li>${e(x)}</li>`).join('')}</ul>
+        ${p.link ? ext(p.link.href, p.link.label, t) : ''}
+      </div>
     </div>
-  </div>
-  <div class="wrap">
-    <h3 class="proof-title" data-reveal>${e(t.ui.proof)}</h3>
-    <ul class="proofs proofs-${p.proofs.length}">
-      ${p.proofs.map((pr, i) => `<li class="proof" data-tilt data-reveal style="--i:${i}">
-        <div class="proof-inner">
-          <p class="proof-meta">${e(pr.meta)}</p>
-          <h4>${e(pr.name)}</h4>
-          <p class="proof-text">${e(pr.text)}</p>
-          ${pr.links.length ? `<p class="proof-links">${pr.links.map((l) => ext(l.href, l.label, t)).join('')}</p>` : ''}
-        </div>
-      </li>`).join('')}
-    </ul>
-    ${next(p.next, t, 0)}
-  </div>
-</section>`;
+  </article>
+</li>`;
 
 export const page = (t, alt) => {
   const url = SITE + t.path;
@@ -66,7 +75,6 @@ export const page = (t, alt) => {
   const og = `${SITE}/assets/img/og-${t.lang}.png`;
   const mail = `mailto:${EMAIL}?subject=${encodeURIComponent(t.contact.emailSubject)}`;
   const wa = `https://wa.me/${PHONE.slice(1)}?text=${encodeURIComponent(t.contact.whatsappText)}`;
-  const steps = t.problems.length;
 
   return `<!doctype html>
 <!-- GENERATED by tools/build-i18n.mjs, edit tools/ instead -->
@@ -163,7 +171,7 @@ export const page = (t, alt) => {
           <p class="lead">${e(t.hero.lead)}</p>
           <div class="actions">
             <a class="btn" href="#contact">${e(t.hero.primary)}${icon('arrow-right', 'btn-arrow')}</a>
-            <a class="btn btn-ghost" href="#scratch">${e(t.hero.secondary)}${icon('arrow-down', 'btn-arrow')}</a>
+            <a class="btn btn-ghost" href="#work">${e(t.hero.secondary)}${icon('arrow-down', 'btn-arrow')}</a>
           </div>
         </div>
         <figure class="hero-mascot">
@@ -172,48 +180,55 @@ export const page = (t, alt) => {
         </figure>
       </div>
       <div class="wrap">
-        <nav class="chips" aria-label="${e(t.hero.chipsLabel)}">
-          <p class="chips-label">${e(t.hero.chipsLabel)}</p>
-          <ul>${t.hero.chips.map((c, i) => `<li><a class="chip" href="${c.href}"><span class="chip-n">${i + 1}</span>${e(c.label)}</a></li>`).join('')}</ul>
-        </nav>
         <dl class="figures">${t.hero.figures.map((f) => `<div><dt>${e(f.n)}</dt><dd>${e(f.t)}</dd></div>`).join('')}</dl>
       </div>
     </section>
 
-    ${t.problems.map((p, i) => problem(p, t, i)).join('\n')}
-
-    <section class="section section-alt" id="more" aria-labelledby="more-title">
+    <section class="section" id="services" aria-labelledby="services-title">
       <div class="wrap">
         <header class="section-head" data-reveal>
-          <p class="eyebrow"><span class="eyebrow-icon">${icon('code')}</span>${e(t.more.eyebrow)}</p>
-          <h2 id="more-title">${e(t.more.title)}</h2>
+          <p class="eyebrow">${e(t.services.eyebrow)}</p>
+          <h2 id="services-title">${e(t.services.title)}</h2>
         </header>
-        <ul class="proofs proofs-3">
-          ${t.more.cards.map((c, i) => `<li class="proof" data-tilt data-reveal style="--i:${i}"><div class="proof-inner">
-            <p class="proof-meta">${e(c.meta)}</p><h3 class="h4">${e(c.name)}</h3><p class="proof-text">${e(c.text)}</p>
-            <p class="proof-links">${ext(c.href, c.label, t)}</p></div></li>`).join('')}
-        </ul>
-        <h3 class="oss-title" data-reveal>${e(t.more.ossTitle)}</h3>
-        <ul class="oss">${t.more.oss.map((o) => `<li data-reveal><span class="oss-name">${o.href ? ext(o.href, o.name, t, 'link mono') : `<span class="mono">${e(o.name)}</span>`}</span><span class="oss-text">${e(o.text)}</span></li>`).join('')}</ul>
-        ${next(t.more.next, t, 0)}
+        <ol class="services">
+          ${t.services.items.map((it, i) => `<li class="service" data-reveal style="--i:${i % 3}">
+            <span class="service-icon">${icon(it.icon)}</span>
+            <h3 class="service-title">${e(it.title)}</h3>
+            <p class="service-pain">${e(it.pain)}</p>
+            <p class="service-promise">${icon('check', 'service-check')}<span>${e(it.promise)}</span></p>
+          </li>`).join('')}
+        </ol>
+        <p class="section-cta" data-reveal><a class="btn btn-ghost" href="#work">${e(t.services.cta)}${icon('arrow-down', 'btn-arrow')}</a></p>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow">${e(t.work.eyebrow)}</p>
+          <h2 id="work-title">${e(t.work.title)}</h2>
+        </header>
+        <ul class="work">${t.work.projects.map((p, i) => project(p, t, i)).join('')}</ul>
+        <h3 class="more-title" data-reveal>${e(t.more.title)}</h3>
+        <ul class="more">${t.more.items.map((m) => `<li data-reveal><span class="more-name">${e(m.name)}</span><span class="more-text">${e(m.text)}</span><span class="more-link">${m.href ? ext(m.href, m.label, t) : ''}</span></li>`).join('')}</ul>
+        <p class="section-cta" data-reveal><a class="btn" href="#contact">${e(t.work.cta)}${icon('arrow-right', 'btn-arrow')}</a></p>
       </div>
     </section>
 
     <section class="section" id="method" aria-labelledby="method-title">
       <div class="wrap">
         <header class="section-head" data-reveal>
-          <p class="eyebrow"><span class="eyebrow-icon">${icon('shield')}</span>${e(t.method.eyebrow)}</p>
+          <p class="eyebrow">${e(t.method.eyebrow)}</p>
           <h2 id="method-title">${e(t.method.title)}</h2>
         </header>
-        <ol class="steps">${t.method.steps.map((s, i) => `<li data-reveal style="--i:${i % 3}"><span class="step-n">${String(i + 1).padStart(2, '0')}</span><h3 class="h4">${e(s.t)}</h3><p>${e(s.d)}</p></li>`).join('')}</ol>
-        ${next(t.method.next, t, 0)}
+        <ol class="steps">${t.method.steps.map((st, i) => `<li data-reveal style="--i:${i % 3}"><span class="step-n">${String(i + 1).padStart(2, '0')}</span><h3 class="h5">${e(st.t)}</h3><p>${e(st.d)}</p></li>`).join('')}</ol>
       </div>
     </section>
 
     <section class="section section-alt" id="path" aria-labelledby="path-title">
       <div class="wrap path-grid">
         <header class="section-head" data-reveal>
-          <p class="eyebrow"><span class="eyebrow-icon">${icon('rocket')}</span>${e(t.path.eyebrow)}</p>
+          <p class="eyebrow">${e(t.path.eyebrow)}</p>
           <h2 id="path-title">${e(t.path.title)}</h2>
           <p class="intro">${e(t.path.intro)}</p>
           <p><a class="btn btn-ghost" href="/assets/cv-paul-messanga.pdf" download>${icon('download')}${e(t.ui.cvLabel)} <span class="btn-meta">${e(t.ui.cvMeta)}</span></a></p>
@@ -222,7 +237,6 @@ export const page = (t, alt) => {
           <ol class="timeline">${t.path.items.map((it) => `<li data-reveal><span class="t-year">${e(it.y)}</span><div><h3 class="h5">${e(it.t)}</h3><p>${e(it.d)}</p></div></li>`).join('')}</ol>
           <h3 class="sub-title">${e(t.path.eduTitle)}</h3>
           <ul class="edu">${t.path.edu.map((ed) => `<li><strong>${e(ed.t)}</strong><span>${e(ed.d)}</span></li>`).join('')}</ul>
-          ${next(t.path.next, t, 0)}
         </div>
       </div>
     </section>
@@ -230,7 +244,7 @@ export const page = (t, alt) => {
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <div class="wrap contact-grid">
         <div data-reveal>
-          <p class="eyebrow"><span class="eyebrow-icon">${icon('message')}</span>${e(t.contact.eyebrow)}</p>
+          <p class="eyebrow">${e(t.contact.eyebrow)}</p>
           <h2 id="contact-title">${e(t.contact.title)}</h2>
           <p class="lead">${e(t.contact.lead)}</p>
           <div class="actions">
@@ -261,7 +275,7 @@ export const page = (t, alt) => {
   </footer>
 
   <div class="cta-bar" data-cta-bar aria-hidden="true">
-    <a class="cta-next" href="#scratch" data-cta-next tabindex="-1"><span class="cta-step" data-cta-step>1/${steps}</span><span class="cta-label"><span>${e(t.ui.barNext)} </span><span data-cta-label>${e(t.problems[0].short)}</span></span>${icon('arrow-down')}</a>
+    <p class="cta-text">${e(t.ui.barText)}</p>
     <a class="btn btn-small" href="#contact" tabindex="-1">${e(t.ui.barTalk)}</a>
     <a class="icon-btn icon-btn-accent" href="${wa}" rel="noopener" target="_blank" aria-label="${e(t.ui.barWhatsApp)}" tabindex="-1">${icon('message')}</a>
   </div>

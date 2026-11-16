@@ -47,11 +47,10 @@ export function initNav() {
 
   const links = new Map([...document.querySelectorAll('.nav-list a[href^="#"]')].map((a) => [a.hash.slice(1), a]));
   if (!('IntersectionObserver' in window) || !links.size) return;
-  const groups = { scratch: 'scratch', broken: 'scratch', legacy: 'scratch', slow: 'scratch', push: 'scratch' };
   const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
-      const id = groups[entry.target.id] || entry.target.id;
+      const id = entry.target.id;
       for (const a of links.values()) a.removeAttribute('aria-current');
       links.get(id)?.setAttribute('aria-current', 'true');
     }
