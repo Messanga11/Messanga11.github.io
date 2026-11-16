@@ -184,7 +184,7 @@ export const page = (t, alt) => {
             <span class="notif-icon">${icon('bell')}</span>
             <span class="notif-text"><span class="notif-meta">${e(t.hero.notif.app)} · ${e(t.hero.notif.time)}</span><strong>${e(t.hero.notif.title)}</strong><span>${e(t.hero.notif.body)}</span></span>
           </div>
-          <img src="/assets/img/hero-app.svg" width="453" height="725" alt="" fetchpriority="high" decoding="async">
+          <img src="/assets/img/hero-character.svg" width="360" height="640" alt="" fetchpriority="high" decoding="async">
         </figure>
       </div>
       <div class="wrap">
