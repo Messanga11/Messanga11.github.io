@@ -2,7 +2,6 @@
 // Le site reste entièrement lisible sans JavaScript.
 (() => {
   document.documentElement.classList.add('js');
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // Année du pied de page
   const year = document.querySelector('[data-year]');
@@ -65,18 +64,4 @@
     }
   }
 
-  // Apparitions au défilement (désactivées si mouvement réduit)
-  const revealables = document.querySelectorAll('.release, .card, .steps li, .timeline li');
-  if (reduceMotion || !('IntersectionObserver' in window)) return;
-  const reveal = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      entry.target.classList.add('is-in');
-      reveal.unobserve(entry.target);
-    }
-  }, { rootMargin: '0px 0px -8% 0px' });
-  for (const el of revealables) {
-    el.setAttribute('data-reveal', '');
-    reveal.observe(el);
-  }
 })();

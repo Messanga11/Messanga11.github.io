@@ -33,7 +33,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script>document.documentElement.classList.add("js")</script>
 
@@ -98,8 +98,8 @@
     <section class="hero" id="haut" aria-labelledby="hero-title">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="status"><span class="dot" aria-hidden="true"></span>Disponible rapidement · Yaoundé, Cameroun</p>
-          <h1 id="hero-title">Je livre des logiciels qui tiennent en production.</h1>
+          <p class="status mono">Disponible rapidement, Yaoundé, Cameroun</p>
+          <h1 id="hero-title">Je livre des logiciels qui tiennent en production</h1>
           <p class="lead">Lead développeur full-stack depuis 2019. Je reprends des bases de code existantes, je sécurise les parcours critiques par des tests de bout en bout et je pilote les mises en production.</p>
           <div class="actions">
             <a class="btn" href="#realisations">Voir mes réalisations</a>
@@ -121,7 +121,7 @@
             <li><span class="ok">✓</span> Image Docker construite par GitHub Actions</li>
             <li><span class="ok">✓</span> Nouvelle version vérifiée avant la bascule</li>
             <li><span class="ok">✓</span> Version précédente prête pour un retour arrière</li>
-            <li class="final"><span class="ok">●</span> En production</li>
+            <li class="final"><span class="ok">✓</span> En production</li>
           </ol>
           <figcaption class="visually-hidden">Les étapes que je suis pour chaque mise en production.</figcaption>
         </figure>
@@ -142,19 +142,19 @@
       <div class="wrap">
         <header class="section-head">
           <p class="eyebrow mono">01 · Réalisations</p>
-          <h2 id="work-title">Cinq produits, cinq façons d'aller en production.</h2>
-          <p class="section-intro">Pour chacun : le problème de départ, ce que j'ai fait, et ce qui a changé. Rien d'inventé : chaque chiffre vient du code, des tests ou des stores.</p>
+          <h2 id="work-title">Cinq produits, cinq façons d'aller en production</h2>
+          <p class="section-intro">Pour chacun : le problème de départ, ce que j'ai fait, et ce qui a changé.</p>
         </header>
 
         <div class="releases">
-          <article class="release" aria-labelledby="r-utando">
+          <article class="release release-main" aria-labelledby="r-utando">
             <header class="release-head">
               <div>
                 <p class="release-meta mono">Mission freelance · 2026</p>
                 <h3 id="r-utando">Utando</h3>
-                <p class="release-tag">Plateforme logistique : partenaires, chauffeurs, voyageurs.</p>
+                <p class="release-tag">Plateforme logistique : partenaires, chauffeurs, voyageurs</p>
               </div>
-              <p class="pill pill-live"><span class="dot" aria-hidden="true"></span>En production</p>
+              <p class="state mono"><svg class="check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>En production</p>
             </header>
             <div class="release-body">
               <div><h4>Le problème</h4><p>Partenaires, chauffeurs et superviseurs doivent suivre les mêmes courses, le même stock et les mêmes paiements, depuis leur téléphone.</p></div>
@@ -176,9 +176,9 @@
               <div>
                 <p class="release-meta mono">Mission freelance · 2026</p>
                 <h3 id="r-adsquid">Adsquid</h3>
-                <p class="release-tag">E-commerce et studio de création publicitaire.</p>
+                <p class="release-tag">E-commerce et studio de création publicitaire</p>
               </div>
-              <p class="pill pill-live"><span class="dot" aria-hidden="true"></span>En production</p>
+              <p class="state mono"><svg class="check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>En production</p>
             </header>
             <div class="release-body">
               <div><h4>Le problème</h4><p>Une plateforme existante à reprendre (API NestJS / GraphQL, dashboard React), avec une migration annoncée mais pas réellement faite.</p></div>
@@ -196,9 +196,9 @@
               <div>
                 <p class="release-meta mono">One2All.TV · 2025 – 2026</p>
                 <h3 id="r-stackz">StackZ et One2All TV</h3>
-                <p class="release-tag">Direct vidéo, salons et jeux, sur TV et mobile.</p>
+                <p class="release-tag">Direct vidéo, salons et jeux, sur TV et mobile</p>
               </div>
-              <p class="pill pill-live"><span class="dot" aria-hidden="true"></span>Sur les stores</p>
+              <p class="state mono"><svg class="check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sur les stores</p>
             </header>
             <div class="release-body">
               <div><h4>Le problème</h4><p>Du direct vidéo, des salons à plusieurs hôtes et des publicités, le tout piloté à la télécommande, sans saccade.</p></div>
@@ -216,9 +216,9 @@
               <div>
                 <p class="release-meta mono">WebPackSolution · 2026</p>
                 <h3 id="r-crm">CRM immobilier</h3>
-                <p class="release-tag">Le CRM qui alimente exclusivealgarvevillas.com.</p>
+                <p class="release-tag">Le CRM qui alimente exclusivealgarvevillas.com</p>
               </div>
-              <p class="pill pill-live"><span class="dot" aria-hidden="true"></span>En production</p>
+              <p class="state mono"><svg class="check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>En production</p>
             </header>
             <div class="release-body">
               <div><h4>Le problème</h4><p>Des prospects arrivent par le site, par e-mail et par WhatsApp. Aucun ne doit rester sans réponse.</p></div>
@@ -236,9 +236,9 @@
               <div>
                 <p class="release-meta mono">Kevmax · 2021 – 2026</p>
                 <h3 id="r-cooltchop">Cooltchop</h3>
-                <p class="release-tag">Commande et livraison de repas au Cameroun.</p>
+                <p class="release-tag">Commande et livraison de repas au Cameroun</p>
               </div>
-              <p class="pill pill-live"><span class="dot" aria-hidden="true"></span>Sur les stores</p>
+              <p class="state mono"><svg class="check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sur les stores</p>
             </header>
             <div class="release-body">
               <div><h4>Le problème</h4><p>Commander un repas au Cameroun, sur des réseaux mobiles qui coupent souvent.</p></div>
@@ -259,7 +259,7 @@
       <div class="wrap">
         <header class="section-head">
           <p class="eyebrow mono">02 · Autres projets</p>
-          <h2 id="more-title">D'autres produits, la même exigence.</h2>
+          <h2 id="more-title">D'autres produits, la même exigence</h2>
         </header>
         <ul class="cards">
           <li class="card">
@@ -319,7 +319,7 @@
       <div class="wrap">
         <header class="section-head">
           <p class="eyebrow mono">03 · Méthode</p>
-          <h2 id="method-title">Une méthode prévisible pour des projets qui ne le sont pas.</h2>
+          <h2 id="method-title">Une méthode prévisible pour des projets qui ne le sont pas</h2>
         </header>
         <ol class="steps">
           <li><span class="step-n mono">01</span><h3>Comprendre</h3><p>Le besoin réel, les utilisateurs, et ce que « réussi » veut dire, avant la première ligne de code.</p></li>
@@ -337,7 +337,7 @@
       <div class="wrap path-grid">
         <header class="section-head">
           <p class="eyebrow mono">04 · Parcours</p>
-          <h2 id="path-title">En production depuis 2019.</h2>
+          <h2 id="path-title">En production depuis 2019</h2>
           <p class="section-intro">Web, mobile, TV et backend, pour des clients au Cameroun et en Europe.</p>
           <a class="btn btn-ghost" href="assets/cv-paul-messanga.pdf" download>Télécharger mon CV <span class="meta">PDF</span></a>
         </header>
