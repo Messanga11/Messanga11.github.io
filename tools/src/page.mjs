@@ -128,7 +128,7 @@ export const page = (t, alt) => {
     '@graph': [
       {
         '@type': 'Person', '@id': `${SITE}/#paul`, name: 'Paul Messanga', jobTitle: t.meta.jobTitle,
-        url, image: `${SITE}/assets/img/paul-800.webp`, email: `mailto:${EMAIL}`, telephone: PHONE,
+        url, image: `${SITE}/assets/img/paul.webp`, email: `mailto:${EMAIL}`, telephone: PHONE,
         address: { '@type': 'PostalAddress', addressLocality: 'Yaoundé', addressCountry: 'CM' },
         alumniOf: { '@type': 'CollegeOrUniversity', name: 'EGEM' }, knowsLanguage: ['fr', 'en'],
         knowsAbout: ['Node.js', 'TypeScript', 'PostgreSQL', 'Docker', 'GitHub Actions', 'React', 'Next.js', 'React Native', 'Flutter', 'Push notifications', 'End-to-end testing'],
@@ -180,7 +180,7 @@ export const page = (t, alt) => {
           </div>
         </div>
         <figure class="hero-photo">
-          <img src="/assets/img/paul-800.webp" srcset="/assets/img/paul-480.webp 480w, /assets/img/paul-800.webp 800w" sizes="(min-width: 60rem) 34rem, 92vw" width="800" height="800" alt="${e(t.hero.photoAlt)}" fetchpriority="high" decoding="async">
+          <img src="/assets/img/paul.webp" width="560" height="380" alt="${e(t.hero.photoAlt)}" fetchpriority="high" decoding="async">
         </figure>
       </div>
       <div class="wrap">
