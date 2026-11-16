@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://messanga11.github.io/sitemap.xml
+Sitemap: https://paul-messanga.ndazoomessanga.workers.dev/sitemap.xml
