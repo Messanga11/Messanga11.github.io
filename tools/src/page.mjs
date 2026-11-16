@@ -1,7 +1,7 @@
 // Page template shared by the FR and EN pages. Every string comes from
 // tools/i18n/<lang>.json and is HTML-escaped by `e`.
 import { icon, sprite } from './icons.mjs';
-import { chameleon, chameleonSmall, chameleonSymbol } from './mascot.mjs';
+import { brandIcon } from './brands.mjs';
 
 export const SITE = 'https://paul-messanga.ndazoomessanga.workers.dev';
 const PHONE = '+237698105092';
@@ -46,7 +46,13 @@ const screen = (p) => {
     case 'order':
       return `<div class="scr scr-order"><div class="phone"><ol class="order">${u.steps.map((x, i) => `<li class="${i < 2 ? 'is-done' : i === 2 ? 'is-now' : ''}"><i></i><span>${e(x)}</span></li>`).join('')}</ol></div></div>`;
     case 'scan':
-      return `<div class="scr scr-scan"><div class="phone"><p class="scan-title">${e(u.title)}</p><div class="face"><span class="face-ring"></span></div>
+      return `<div class="scr scr-scan"><div class="phone"><p class="scan-title">${e(u.title)}</p>
+        <div class="face"><svg viewBox="0 0 120 120" class="face-svg"><path class="f-hair" d="M30 56 C28 30 46 16 62 16 C82 16 94 32 92 56 C88 44 80 38 70 36 C58 42 42 44 30 56 Z"/>
+        <path class="f-neck" d="M50 84 L50 98 C50 102 70 102 70 98 L70 84 Z"/><path class="f-shoulders" d="M22 120 C24 104 38 96 60 96 C82 96 96 104 98 120 Z"/>
+        <ellipse class="f-skin" cx="61" cy="60" rx="27" ry="31"/><path class="f-hair" d="M34 52 C36 36 50 28 64 28 C76 28 86 36 88 50 C80 44 70 40 60 42 C50 44 42 48 34 52 Z"/>
+        <ellipse class="f-eye" cx="51" cy="60" rx="2.6" ry="3"/><ellipse class="f-eye" cx="71" cy="60" rx="2.6" ry="3"/><path class="f-line" d="M61 64 L59 72 L63 72"/><path class="f-line" d="M54 80 C58 83 64 83 68 80"/>
+        <path class="f-mesh" d="M38 58 L61 50 L84 58 M61 50 L61 90 M40 72 L61 76 L82 72"/><g class="f-pts"><circle cx="38" cy="58" r="1.6"/><circle cx="61" cy="50" r="1.6"/><circle cx="84" cy="58" r="1.6"/><circle cx="40" cy="72" r="1.6"/><circle cx="82" cy="72" r="1.6"/><circle cx="61" cy="76" r="1.6"/><circle cx="61" cy="90" r="1.6"/></g>
+        <path class="f-corner" d="M14 30 V14 H30 M90 14 H106 V30 M106 90 V106 H90 M30 106 H14 V90"/></svg></div>
         <ol class="scan-steps">${u.steps.map((x, i) => `<li class="${i < 2 ? 'is-done' : ''}">${e(x)}</li>`).join('')}</ol></div></div>`;
     default:
       return '';
@@ -62,7 +68,7 @@ const project = (p, t, i) => `
       <h3 id="w-${p.id}">${e(p.name)}</h3>
       <p class="work-result">${e(p.result)}</p>
       <div class="work-foot">
-        <ul class="tags" aria-label="Stack">${p.tags.map((x) => `<li>${e(x)}</li>`).join('')}</ul>
+        <ul class="tags" aria-label="Stack">${p.tags.map((x) => `<li>${brandIcon(x)}${e(x)}</li>`).join('')}</ul>
         ${p.link ? ext(p.link.href, p.link.label, t) : ''}
       </div>
     </div>
@@ -90,8 +96,8 @@ export const page = (t, alt) => {
   <link rel="alternate" hreflang="fr" href="${SITE}/">
   <link rel="alternate" hreflang="en" href="${SITE}/en/">
   <link rel="alternate" hreflang="x-default" href="${SITE}/">
-  <meta name="theme-color" content="#FBF5EC" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#17120F" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
   <meta name="color-scheme" content="light dark">
   <meta property="og:type" content="profile">
   <meta property="og:locale" content="${t.ogLocale}">
@@ -113,7 +119,7 @@ export const page = (t, alt) => {
   ${headScript(t)}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=Fraunces:opsz,wght@9..144,600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="modulepreload" href="/assets/js/main.js">
   <script type="module" src="/assets/js/main.js"></script>
@@ -134,12 +140,11 @@ export const page = (t, alt) => {
 </head>
 <body data-menu-open="${e(t.ui.menuOpen)}" data-menu-close="${e(t.ui.menuClose)}" data-theme-light="${e(t.ui.themeLight)}" data-theme-dark="${e(t.ui.themeDark)}" data-theme-system="${e(t.ui.themeSystem)}">
   ${sprite()}
-  ${chameleonSymbol()}
   <a class="skip" href="#main">${e(t.ui.skip)}</a>
 
   <header class="site-header" data-header>
     <div class="wrap header-inner">
-      <a class="brand" href="#top" aria-label="${e(t.ui.home)}">${chameleonSmall('brand-mascot')}<span>Paul Messanga</span></a>
+      <a class="brand" href="#top" aria-label="${e(t.ui.home)}"><span class="brand-mark" aria-hidden="true"></span><span>Paul Messanga</span></a>
       <nav class="nav" aria-label="${e(t.ui.navLabel)}">
         <ul class="nav-list" id="menu" data-menu>
           ${t.nav.map((n) => `<li><a href="${n.href}">${e(n.label)}</a></li>`).join('')}
@@ -163,7 +168,6 @@ export const page = (t, alt) => {
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <canvas class="hero-shader" aria-hidden="true" data-shader></canvas>
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <p class="status"><span class="status-dot" aria-hidden="true"></span>${e(t.hero.status)}</p>
@@ -174,10 +178,12 @@ export const page = (t, alt) => {
             <a class="btn btn-ghost" href="#work">${e(t.hero.secondary)}${icon('arrow-down', 'btn-arrow')}</a>
           </div>
         </div>
-        <figure class="hero-mascot">
-          ${chameleon('mascot-hero')}
-          <figcaption class="bubble">${e(t.hero.mascot)}</figcaption>
-        </figure>
+        <div class="hero-visual" aria-hidden="true">
+          ${(() => { const P = Object.fromEntries(t.work.projects.map((p) => [p.id, p])); return `
+          <div class="hv hv-tv">${screen(P.stackz)}</div>
+          <div class="hv hv-pay">${screen(P.adsquid)}</div>
+          <div class="hv hv-chat">${screen(P.docta)}</div>`; })()}
+        </div>
       </div>
       <div class="wrap">
         <dl class="figures">${t.hero.figures.map((f) => `<div><dt>${e(f.n)}</dt><dd>${e(f.t)}</dd></div>`).join('')}</dl>
@@ -259,10 +265,6 @@ export const page = (t, alt) => {
             <li>${ext('https://github.com/Messanga11', 'GitHub', t, 'link-plain')}</li>
           </ul>
         </div>
-        <figure class="contact-mascot" data-reveal style="--i:1">
-          ${chameleonSmall('mascot-contact')}
-          <figcaption class="bubble">${e(t.contact.mascot)}</figcaption>
-        </figure>
       </div>
     </section>
   </main>
@@ -296,14 +298,12 @@ export const notFound = (fr, en) => `<!doctype html>
   <script>try{var s=localStorage.getItem('theme');if(s==='light'||s==='dark')document.documentElement.setAttribute('data-theme',s)}catch(_){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=Fraunces:opsz,wght@9..144,600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-  ${chameleonSymbol()}
   <main class="section notfound">
     <div class="wrap">
-      ${chameleonSmall('mascot-404')}
       <p class="eyebrow">404</p>
       <h1>${e(fr.notFound.title)}</h1>
       <p class="lead">${e(fr.notFound.text)}</p>
