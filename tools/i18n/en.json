@@ -211,10 +211,7 @@
           "Stripe",
           "PayPal"
         ],
-        "link": {
-          "href": "https://adsquid.fr/",
-          "label": "adsquid.fr"
-        },
+        "link": null,
         "ui": {
           "title": "Order",
           "lines": [
@@ -352,8 +349,8 @@
       {
         "name": "ChezBio",
         "text": "Organic products e-commerce, web and mobile",
-        "href": "https://www.chezbio.com/",
-        "label": "chezbio.com"
+        "href": "",
+        "label": ""
       },
       {
         "name": "Open source",
