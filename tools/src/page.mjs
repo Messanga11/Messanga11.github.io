@@ -80,8 +80,8 @@ const project = (p, t, i) => `
 </li>`;
 
 export const page = (t, alt) => {
-  const url = SITE + t.path;
-  const altUrl = SITE + alt.path;
+  const url = SITE + t.urlPath;
+  const altUrl = SITE + alt.urlPath;
   const og = `${SITE}/assets/img/og-${t.lang}.png`;
   const mail = `mailto:${EMAIL}?subject=${encodeURIComponent(t.contact.emailSubject)}`;
   const wa = `https://wa.me/${PHONE.slice(1)}?text=${encodeURIComponent(t.contact.whatsappText)}`;
@@ -156,7 +156,7 @@ export const page = (t, alt) => {
         </ul>
       </nav>
       <div class="header-actions">
-        <a class="icon-btn lang-link" href="${alt.path}" hreflang="${alt.lang}" lang="${alt.lang}" data-lang="${alt.lang}" aria-label="${e(t.ui.langLabel)}">${icon('globe')}<span>${e(t.ui.langShort)}</span></a>
+        <a class="icon-btn lang-link" href="${alt.urlPath}" hreflang="${alt.lang}" lang="${alt.lang}" data-lang="${alt.lang}" aria-label="${e(t.ui.langLabel)}">${icon('globe')}<span>${e(t.ui.langShort)}</span></a>
         <button class="icon-btn theme-btn" type="button" data-theme-btn hidden>
           <span class="theme-icon" data-show="light">${icon('sun')}</span>
           <span class="theme-icon" data-show="dark">${icon('moon')}</span>
@@ -168,8 +168,8 @@ export const page = (t, alt) => {
         </button>
       </div>
     </div>
-    <div class="progress" aria-hidden="true"><span data-progress></span></div>
   </header>
+  <div class="progress" aria-hidden="true"><span data-progress></span></div>
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">

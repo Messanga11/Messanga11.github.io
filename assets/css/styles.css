@@ -187,9 +187,13 @@ a { color: inherit; }
   position: sticky; top: 0; z-index: 100;
   background: color-mix(in srgb, var(--bg) 86%, transparent);
   backdrop-filter: saturate(140%) blur(12px); -webkit-backdrop-filter: saturate(140%) blur(12px);
-  border-bottom: 1px solid transparent; transition: border-color var(--d-2) var(--ease);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--d-2) var(--ease), transform var(--d-3) var(--ease);
+  /* Own compositor layer: stops Safari from flickering the blurred header over animated content */
+  transform: translateY(0); will-change: transform;
 }
 .site-header.is-scrolled { border-bottom-color: var(--line); }
+.site-header.is-hidden { transform: translateY(calc(-100% - 2px)); }
 .header-inner { display: flex; align-items: center; gap: var(--s-4); min-height: 4.5rem; }
 .brand { white-space: nowrap; display: inline-flex; align-items: center; gap: var(--s-2); font: 600 1rem/1 var(--font-display); letter-spacing: -0.01em; text-decoration: none; min-height: 44px; margin-right: auto; }
 .nav-list { display: flex; gap: var(--s-5); }
@@ -210,7 +214,7 @@ a { color: inherit; }
 .menu-btn[aria-expanded="true"] .menu-open { display: none; }
 .menu-btn[aria-expanded="true"] .menu-close { display: inline-flex; }
 
-.progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; overflow: hidden; }
+.progress { position: fixed; top: 0; left: 0; right: 0; z-index: 101; height: 3px; overflow: hidden; pointer-events: none; }
 .progress span { display: block; height: 100%; background: var(--accent); transform: scaleX(0); transform-origin: left; }
 
 @media (max-width: 63.99rem) { .nav-list { gap: var(--s-4); } }
@@ -533,6 +537,8 @@ a { color: inherit; }
 
 @media print {
   .site-header, .cta-bar,   .contact, .site-footer { background: none; color: #000; }
+  .site-header { position: static; transform: none !important; will-change: auto; }
+  .progress { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
 @media (max-width: 59.99rem) { .hero-art { max-width: 17rem; } }
