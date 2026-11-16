@@ -180,7 +180,7 @@ export const page = (t, alt) => {
           </div>
         </div>
         <figure class="hero-photo">
-          <img src="/assets/img/paul.webp" width="560" height="380" alt="${e(t.hero.photoAlt)}" fetchpriority="high" decoding="async">
+          <img src="/assets/img/workspace.webp" width="960" height="640" alt="" fetchpriority="high" decoding="async">
         </figure>
       </div>
       <div class="wrap">
@@ -254,7 +254,7 @@ export const page = (t, alt) => {
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <div class="wrap contact-grid">
         <div data-reveal>
-          <p class="eyebrow">${e(t.contact.eyebrow)}</p>
+          <p class="contact-who"><img class="avatar-photo" src="/assets/img/paul-avatar.webp" width="250" height="250" alt="${e(t.hero.photoAlt)}" loading="lazy" decoding="async"><span><strong>Paul Messanga</strong><span>${e(t.meta.jobTitle)}</span></span></p>
           <h2 id="contact-title">${e(t.contact.title)}</h2>
           <p class="lead">${e(t.contact.lead)}</p>
           <div class="actions">

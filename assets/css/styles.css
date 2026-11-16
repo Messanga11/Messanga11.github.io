@@ -435,6 +435,10 @@ a { color: inherit; }
 .contact-grid { display: grid; gap: var(--s-6); align-items: center; }
 .contact .eyebrow { color: var(--contact-ink-2); }
 .contact .lead { color: var(--contact-ink-2); }
+.contact-who { display: flex; align-items: center; gap: var(--s-3); }
+.avatar-photo { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--contact-ink); }
+.contact-who strong { display: block; font-weight: 600; }
+.contact-who span span { display: block; font-size: var(--fs-sm); color: var(--contact-ink-2); }
 .contact .actions { margin-top: var(--s-6); }
 .contact-list { display: flex; flex-wrap: wrap; gap: var(--s-1) var(--s-5); margin-top: var(--s-6); color: var(--contact-ink-2); font-size: var(--fs-sm); }
 .contact-list li, .contact-list a { display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px; }
