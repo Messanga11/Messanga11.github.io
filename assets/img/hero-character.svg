@@ -1,58 +1,74 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" fill="none">
-  <!-- window -->
-  <path d="M80 470V270a100 100 0 0 1 200 0v200z" fill="#FFFFFF"/>
-  <path d="M180 170v300M80 330h200" stroke="#F3EDE6" stroke-width="4"/>
-  <!-- frames on wall -->
-  <rect x="22" y="250" width="44" height="34" rx="2" fill="#E6D8C8"/>
-  <rect x="31" y="258" width="26" height="18" fill="#FFFFFF"/>
-  <!-- pendant lamp -->
-  <path d="M292 150v70" stroke="#0A0A0A" stroke-width="2"/>
-  <path d="M262 246c4-16 16-26 30-26s26 10 30 26z" fill="#F59E0B"/>
-  <ellipse cx="292" cy="248" rx="9" ry="4" fill="#FFF7E0"/>
-  <!-- plant -->
-  <path d="M326 540c-30-40-22-110 4-140 12 40 10 100-4 140z" fill="#3F6E4A"/>
-  <path d="M330 545c4-50 24-90 34-96 4 40-10 80-34 96z" fill="#6FA37B"/>
-  <path d="M320 548c-26-20-44-56-42-80 20 10 38 40 42 80z" fill="#6FA37B"/>
-  <path d="M304 540h44l-6 60h-32z" fill="#FFFFFF"/>
+  <!-- wall: arched window, frames, lamp -->
+  <path d="M96 520V288a84 84 0 0 1 168 0v232z" fill="#FFFFFF"/>
+  <path d="M180 204v316M96 380h168" stroke="#F3EDE6" stroke-width="4"/>
+  <rect x="24" y="268" width="50" height="40" rx="2" fill="#E6D8C8"/>
+  <rect x="34" y="277" width="30" height="22" fill="#FFFFFF"/>
+  <rect x="34" y="324" width="32" height="26" rx="2" fill="#E6D8C8"/>
+  <rect x="41" y="331" width="18" height="12" fill="#FFFFFF"/>
+  <path d="M300 150v84" stroke="#0A0A0A" stroke-width="1.5"/>
+  <path d="M268 262c3-17 16-28 32-28s29 11 32 28z" fill="#F59E0B"/>
+  <path d="M290 262a10 6 0 0 0 20 0z" fill="#FFF4D6"/>
   <!-- floor -->
-  <path d="M0 600h360" stroke="#E6D8C8" stroke-width="2"/>
-  <!-- desk -->
-  <path d="M184 448l-6 152M286 448l6 152" stroke="#D98E2B" stroke-width="6" stroke-linecap="round"/>
-  <rect x="160" y="436" width="140" height="14" rx="4" fill="#E2D3C3"/>
-  <!-- laptop (back of screen faces us) -->
-  <path d="M206 436l26-96h58l-14 96z" fill="#D1D5DB"/>
-  <circle cx="256" cy="388" r="5" fill="#FFFFFF"/>
-  <rect x="190" y="430" width="92" height="7" rx="3" fill="#9CA3AF"/>
-  <!-- mug -->
-  <rect x="268" y="414" width="20" height="22" rx="4" fill="#2563EB"/>
-  <path d="M288 420a6 6 0 0 1 0 12" stroke="#2563EB" stroke-width="4"/>
-  <!-- chair -->
-  <path d="M74 488l-10 112M160 488l10 112" stroke="#D98E2B" stroke-width="6" stroke-linecap="round"/>
-  <rect x="58" y="472" width="118" height="20" rx="10" fill="#FFFFFF"/>
-  <path d="M60 480c-6-60 0-110 10-130" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round"/>
-  <!-- legs -->
-  <path d="M100 470h96" stroke="#1E293B" stroke-width="34" stroke-linecap="round"/>
-  <path d="M196 470l14 112" stroke="#1E293B" stroke-width="30" stroke-linecap="round"/>
-  <path d="M196 586h36a10 10 0 0 1 10 10v4h-50z" fill="#E4572E"/>
-  <!-- torso -->
-  <path d="M92 362c4-22 22-34 40-34s34 12 38 34l6 110H86z" fill="#2563EB"/>
-  <path d="M120 330l12 18 12-18" fill="#FFFFFF"/>
+  <path d="M0 602h360" stroke="#E6D8C8" stroke-width="2"/>
+  <!-- plant (left) -->
+  <path d="M40 520c-26-46-20-118 8-150 12 46 8 110-8 150z" fill="#3F6E4A"/>
+  <path d="M46 524c2-54 24-96 36-104 6 44-8 86-36 104z" fill="#6FA37B"/>
+  <path d="M36 526c-24-22-40-60-36-86 20 12 34 44 36 86z" fill="#6FA37B"/>
+  <path d="M40 470c4-30 6-60 8-100M46 524c10-40 22-74 36-104" stroke="#0A0A0A" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M18 520h50l-7 82H25z" fill="#FFFFFF"/>
+  <!-- side table + laptop -->
+  <path d="M276 498l-8 104M332 498l8 104" stroke="#D98E2B" stroke-width="5" stroke-linecap="round"/>
+  <rect x="262" y="488" width="86" height="12" rx="4" fill="#E2D3C3"/>
+  <rect x="270" y="440" width="66" height="44" rx="4" fill="#0A0A0A"/>
+  <rect x="274" y="444" width="58" height="36" rx="2" fill="#FFFFFF"/>
+  <rect x="279" y="450" width="24" height="5" rx="2.5" fill="#2563EB"/>
+  <rect x="279" y="460" width="46" height="4" rx="2" fill="#E5E7EB"/>
+  <rect x="279" y="468" width="34" height="4" rx="2" fill="#E5E7EB"/>
+  <path d="M262 484h82l-4 6h-74z" fill="#9CA3AF"/>
+  <!-- armchair -->
+  <path d="M110 548l-6 54M232 548l6 54" stroke="#D98E2B" stroke-width="6" stroke-linecap="round"/>
+  <path d="M96 400c0-26 14-40 34-40h6c16 0 24 12 24 30v86H96z" fill="#E2D3C3"/>
+  <rect x="88" y="470" width="166" height="80" rx="22" fill="#E2D3C3"/>
+  <path d="M110 488c40-6 90-6 128 0" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- back leg (planted) -->
+  <path d="M150 482l70 6" stroke="#1E293B" stroke-width="30" stroke-linecap="round"/>
+  <path d="M220 488l4 92" stroke="#1E293B" stroke-width="26" stroke-linecap="round"/>
+  <path d="M206 586c6-6 26-6 32 0l14 6c4 2 4 10-2 10h-44c-4 0-4-10 0-16z" fill="#FFFFFF"/>
+  <path d="M204 598h50" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/>
+  <!-- torso: sweater -->
+  <path d="M128 360c6-14 18-20 32-20s24 8 28 22l10 112c-20 10-48 10-74 4z" fill="#2563EB"/>
+  <path d="M148 342c4 8 18 8 22 0" stroke="#1D4ED8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M130 470c22 6 46 6 66 0" stroke="#0A0A0A" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- crossed leg (front) -->
+  <path d="M150 474c40-4 74-14 100-26" stroke="#334155" stroke-width="30" stroke-linecap="round"/>
+  <path d="M252 446l18 74" stroke="#334155" stroke-width="24" stroke-linecap="round"/>
+  <path d="M190 470c18-4 34-10 46-16" stroke="#0A0A0A" stroke-width="1.2" stroke-linecap="round"/>
+  <rect x="262" y="520" width="18" height="12" fill="#F59E0B" transform="rotate(-14 271 526)"/>
+  <path d="M262 534c4-4 20-6 26-2l16 8c4 3 2 10-4 10h-36c-6 0-6-12-2-16z" fill="#FFFFFF" transform="rotate(-14 280 542)"/>
   <!-- back arm -->
-  <path d="M100 370l-6 60 64 0" stroke="#1D4ED8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M182 368l20 50 18-26" stroke="#1D4ED8" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
   <!-- neck + head -->
-  <rect x="122" y="306" width="20" height="28" rx="8" fill="#7A4B36"/>
-  <circle cx="134" cy="288" r="30" fill="#8A5A44"/>
-  <path d="M104 292c-6-30 10-46 32-46s34 14 30 36c-6-8-16-12-28-12-14 0-24 8-26 22z" fill="#0A0A0A"/>
-  <circle cx="114" cy="292" r="6" fill="#7A4B36"/>
-  <circle cx="150" cy="294" r="3" fill="#0A0A0A"/>
-  <path d="M147 308c5 3 10 2 13-2" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- front arm holding phone -->
-  <path d="M152 366l14 52 32-30" stroke="#2563EB" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
-  <g transform="rotate(-24 206 376)">
-    <rect x="196" y="352" width="22" height="40" rx="5" fill="#0A0A0A"/>
-    <rect x="199" y="357" width="16" height="28" rx="2" fill="#60A5FA"/>
+  <defs><clipPath id="skull"><ellipse cx="162" cy="302.5" rx="23" ry="26"/></clipPath></defs>
+  <path d="M152 320h16v22c-4 4-12 4-16 0z" fill="#6E4130"/>
+  <ellipse cx="162" cy="304" rx="21" ry="24" fill="#8A5A44"/>
+  <path d="M136 270h56v20c-10-5-22-6-32-3-8 3-14 9-16 17l-8 2z" fill="#0A0A0A" clip-path="url(#skull)"/>
+  <ellipse cx="146" cy="308" rx="5" ry="6" fill="#6E4130"/>
+  <path d="M170 306c3 2 6 2 9 0" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M174 320c3 2 6 1 8-1" stroke="#0A0A0A" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M182 308l4 6-3 1" stroke="#6E4130" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- phone -->
+  <g transform="rotate(-18 214 384)">
+    <rect x="204" y="364" width="20" height="38" rx="4" fill="#0A0A0A"/>
+    <rect x="207" y="369" width="14" height="27" rx="1.5" fill="#60A5FA"/>
   </g>
-  <circle cx="201" cy="384" r="10" fill="#8A5A44"/>
-  <!-- notification ping from phone -->
-  <path d="M222 340a18 18 0 0 1 6 16M230 328a32 32 0 0 1 10 30" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+  <!-- hands -->
+  <ellipse cx="220" cy="392" rx="8" ry="7" fill="#8A5A44"/>
+  <!-- front arm -->
+  <path d="M150 372l22 56 34-26" stroke="#2563EB" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M196 404l8-6" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="212" cy="396" rx="9" ry="8" fill="#8A5A44"/>
+  <path d="M206 390c3-3 8-4 12-2" stroke="#6E4130" stroke-width="1.4" stroke-linecap="round"/>
+  <!-- notification ping -->
+  <path d="M232 360a16 16 0 0 1 6 14M240 348a30 30 0 0 1 10 28" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
 </svg>
