@@ -119,7 +119,13 @@
         "t": "production releases led, rollback always ready"
       }
     ],
-    "photoAlt": "Paul Messanga"
+    "photoAlt": "Paul Messanga",
+    "notif": {
+      "app": "Your app",
+      "time": "now",
+      "title": "Payment received",
+      "body": "Order #2048 confirmed, the customer has been notified"
+    }
   },
   "services": {
     "eyebrow": "What I fix",

@@ -179,8 +179,12 @@ export const page = (t, alt) => {
             <a class="btn btn-ghost" href="#work">${e(t.hero.secondary)}${icon('arrow-down', 'btn-arrow')}</a>
           </div>
         </div>
-        <figure class="hero-photo">
-          <img src="/assets/img/workspace.webp" width="960" height="640" alt="" fetchpriority="high" decoding="async">
+        <figure class="hero-art">
+          <div class="notif" aria-hidden="true">
+            <span class="notif-icon">${icon('bell')}</span>
+            <span class="notif-text"><span class="notif-meta">${e(t.hero.notif.app)} · ${e(t.hero.notif.time)}</span><strong>${e(t.hero.notif.title)}</strong><span>${e(t.hero.notif.body)}</span></span>
+          </div>
+          <img src="/assets/img/hero-app.svg" width="453" height="725" alt="" fetchpriority="high" decoding="async">
         </figure>
       </div>
       <div class="wrap">

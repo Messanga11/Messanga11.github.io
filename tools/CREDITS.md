@@ -1,6 +1,6 @@
 # Credits
 
-- Hero photo `assets/img/workspace.webp`: "Man Work" by Burst, via StockSnap,
-  CC0 1.0 (no attribution required). https://stocksnap.io/photo/man-work-DZ7DC58DSV
+- Hero illustration `assets/img/hero-app.svg`: "Phone call" from unDraw by Katerina Limpitsouni,
+  recoloured. unDraw licence: free for commercial use, no attribution required. https://undraw.co/license
 - Tech logos: Simple Icons, CC0 1.0. https://simpleicons.org
 - UI icons: Lucide, ISC licence. https://lucide.dev

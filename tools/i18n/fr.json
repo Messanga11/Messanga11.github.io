@@ -119,7 +119,13 @@
         "t": "mises en production pilotées, retour arrière toujours prêt"
       }
     ],
-    "photoAlt": "Paul Messanga"
+    "photoAlt": "Paul Messanga",
+    "notif": {
+      "app": "Votre app",
+      "time": "maintenant",
+      "title": "Paiement reçu",
+      "body": "Commande #2048 confirmée, le client est prévenu"
+    }
   },
   "services": {
     "eyebrow": "Ce que je règle",
