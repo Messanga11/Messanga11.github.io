@@ -1,7 +1,7 @@
 // Page template shared by the FR and EN pages. Every string comes from
 // tools/i18n/<lang>.json and is HTML-escaped by `e`.
 import { icon, sprite } from './icons.mjs';
-import { brandIcon } from './brands.mjs';
+import { brandIcon, brandSprite } from './brands.mjs';
 
 export const SITE = 'https://paul-messanga.ndazoomessanga.workers.dev';
 const PHONE = '+237698105092';
@@ -140,6 +140,7 @@ export const page = (t, alt) => {
 </head>
 <body data-menu-open="${e(t.ui.menuOpen)}" data-menu-close="${e(t.ui.menuClose)}" data-theme-light="${e(t.ui.themeLight)}" data-theme-dark="${e(t.ui.themeDark)}" data-theme-system="${e(t.ui.themeSystem)}">
   ${sprite()}
+  ${brandSprite()}
   <a class="skip" href="#main">${e(t.ui.skip)}</a>
 
   <header class="site-header" data-header>

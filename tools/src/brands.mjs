@@ -56,9 +56,13 @@ const TAG_TO_BRAND = {
   'Payload': 'payloadcms', 'Docker': 'docker', 'PHP / Slim': 'php', 'Fastify': 'fastify'
 };
 
+export const brandSprite = () =>
+  `<svg class="sprite" aria-hidden="true" focusable="false"><defs>${Object.entries(BRANDS)
+    .map(([id, b]) => `<symbol id="b-${id}" viewBox="0 0 24 24"><path d="${b.d}"/></symbol>`)
+    .join('')}</defs></svg>`;
+
 export const brandIcon = (tag) => {
   const id = TAG_TO_BRAND[tag];
   if (!id) return '';
-  const b = BRANDS[id];
-  return `<svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="--brand:#${b.hex}"><path d="${b.d}"/></svg>`;
+  return `<svg class="brand-icon" aria-hidden="true" focusable="false" style="--brand:#${BRANDS[id].hex}"><use href="#b-${id}"/></svg>`;
 };
